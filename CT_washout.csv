@@ -1,0 +1,571 @@
+screen_id,source,age,age_class,sex,gender,race,ethnicity,screen_result,phone_result,zoom_result,enrolled,enrolled_result
+874879,Referral from another study,36,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+856115,Facebook,55,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+358957,email listserv,56,Middle-aged,Male,Cis-Man,Asian,No,Eligible,Eligible,Eligible,Yes,Eligible
+296053,Friend,33,Adult,Female,Cis-Woman,Black or African American,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+605008,Referral from another study,36,Adult,Female,Cis-Woman,Multiple Races,No,Eligible,Eligible,washout,No,washout
+132967,Today@Brown,43,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,No,washout
+654274,Referral from another study,32,Adult,Male,Prefer not to answer,Unsure,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+539629,Today@Brown,23,Youth,Male,Cis-Man,Black or African American,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+425393,Referral from another study,22,Youth,Male,Cis-Man,Asian,No,Eligible,Eligible,Eligible,Yes,Eligible
+227612,Referral from another study,52,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+190197,Today@Brown,59,Middle-aged,Female,Cis-Woman,American Indian or Alaska Native,No,Eligible,Eligible,Eligible,Yes,Eligible
+440370,Friend,22,Youth,Female,Multiple Identities,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+425914,Flyer/Poster,21,Youth,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+320541,email listserv,38,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+880375,Flyer/Poster,29,Adult,Female,Cis-Woman,Multiple Races,No,Eligible,Eligible,Eligible,Yes,Eligible
+964937,Friend,33,Adult,Female,Cis-Woman,White,Unsure,Eligible,Eligible,Eligible,No,washout
+885091,Craigslist,29,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,No,washout
+419603,Flyer/Poster,22,Youth,Female,Non-binary,Multiple Races,No,Eligible,Eligible,Eligible,No,washout
+677315,Referral from another study,50,Middle-aged,Male,Prefer not to answer,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+216924,Multiple,21,Youth,Male,Cis-Man,Unsure,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+510091,Flyer/Poster,26,Adult,Female,Cis-Woman,Multiple Races,No,Eligible,Eligible,Eligible,No,washout
+979965,Referral from another study,41,Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+692517,Friend,29,Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+590013,internet,23,Youth,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+790654,Friend,37,Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+772590,Facebook,43,Adult,Male,Cis-Man,Black or African American,No,Eligible,Eligible,Eligible,Yes,Eligible
+175776,Friend,27,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+706310,reddit,26,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+525519,reddit,28,Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,No,washout
+118971,reddit,29,Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+809505,Referral from another study,36,Adult,Female,Cis-Woman,American Indian or Alaska Native,No,Eligible,Eligible,Eligible,Yes,Eligible
+845390,internet,27,Adult,Female,Cis-Woman,Multiple Races,No,Eligible,Eligible,Eligible,Yes,Eligible
+713319,Multiple,24,Youth,Female,Non-binary,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+569282,Referral from another study,23,Youth,Female,Genderqueer/gender non-conforming,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+745304,Flyer/Poster,36,Adult,Female,Cis-Woman,Asian,No,Eligible,Eligible,Eligible,Yes,Eligible
+217912,Flyer/Poster,20,Youth,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+355321,Flyer/Poster,62,Older-Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+807666,Today@Brown,34,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,No,washout
+710434,Referral from another study,39,Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+362884,Flyer/Poster,35,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+614680,Flyer/Poster,19,Youth,Male,Cis-Man,White,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+229304,Referral from another study,40,Adult,Female,Cis-Woman,Black or African American,No,Eligible,Eligible,Eligible,Yes,Eligible
+179339,Flyer/Poster,27,Adult,Male,Cis-Man,Black or African American,No,Eligible,Eligible,Eligible,Yes,Eligible
+131189,Today@Brown,21,Youth,Male,Cis-Man,Black or African American,No,Eligible,Eligible,Eligible,No,washout
+534542,Flyer/Poster,28,Adult,Male,Cis-Man,Black or African American,No,Eligible,Eligible,Eligible,Yes,Eligible
+468118,Flyer/Poster,19,Youth,Female,Cis-Woman,American Indian or Alaska Native,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+556462,Today@Brown,23,Youth,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+958286,Referral from another study,22,Youth,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+201168,Flyer/Poster,24,Youth,Female,Cis-Woman,Asian,No,Eligible,Eligible,Eligible,Yes,Eligible
+201168,Flyer/Poster,24,Youth,Female,Cis-Woman,Asian,No,Eligible,washout,NA,No,NA
+201168,Flyer/Poster,24,Youth,Female,Cis-Woman,Asian,No,Eligible,washout,NA,No,NA
+201168,Flyer/Poster,24,Youth,Female,Cis-Woman,Asian,No,Eligible,washout,NA,No,NA
+209700,Referral from another study,40,Adult,Female,Cis-Woman,Multiple Races,No,Eligible,Eligible,Eligible,No,washout
+193875,internet,45,Middle-aged,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,No,washout
+213341,Referral from another study,26,Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+610221,Flyer/Poster,38,Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,No,washout
+594424,Referral from another study,21,Youth,Female,Cis-Woman,Black or African American,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+341138,internet,37,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+667054,Flyer/Poster,24,Youth,Male,Cis-Man,Multiple Races,No,Eligible,Eligible,Eligible,Yes,Eligible
+575715,Referral from another study,38,Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+309595,Today@Brown,45,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,No,washout
+655840,internet,30,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+261490,Today@Brown,21,Youth,Male,Non-binary,Unsure,No,Eligible,Eligible,Eligible,Yes,Eligible
+544032,Flyer/Poster,56,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,No,washout
+590976,Referral from another study,50,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+305800,Craigslist,28,Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+156241,Craigslist,38,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+211133,Friend,23,Youth,Female,Cis-Woman,Unsure,Yes,Eligible,Eligible,Eligible,No,washout
+698752,Craigslist,47,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+553654,Friend,24,Youth,Female,Cis-Woman,White,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+805127,Craigslist,72,Older-Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+318522,Craigslist,23,Youth,Female,Cis-Woman,Black or African American,No,Eligible,Eligible,Eligible,No,washout
+993834,Craigslist,51,Middle-aged,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+884107,Craigslist,52,Middle-aged,Male,Cis-Man,White,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+626960,Flyer/Poster,36,Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,No,washout
+523457,Flyer/Poster,24,Youth,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+258128,Craigslist,57,Middle-aged,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+666534,Friend,43,Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+909919,Flyer/Poster,22,Youth,Female,Cis-Woman,Black or African American,No,Eligible,Eligible,Eligible,No,washout
+401404,internet,30,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+195696,Craigslist,30,Adult,Female,Cis-Woman,Asian,No,Eligible,Eligible,Eligible,Yes,Eligible
+776190,internet,29,Adult,Female,Multiple Identities,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+829934,Craigslist,64,Older-Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+988095,Craigslist,24,Youth,Female,Multiple Identities,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+930873,Craigslist,55,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,No,washout
+370349,Craigslist,42,Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+169566,Craigslist,61,Older-Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+967141,Flyer/Poster,42,Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+968565,Friend,41,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+854985,Referral from another study,22,Youth,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+655017,Referral from another study,43,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+569033,Craigslist,31,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,No,washout
+282228,Flyer/Poster,29,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+175535,Flyer/Poster,58,Middle-aged,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+533231,internet,27,Adult,Female,Cis-Woman,White,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+533703,Flyer/Poster,33,Adult,Male,Cis-Man,Asian,No,Eligible,Eligible,Eligible,Yes,Eligible
+562310,Flyer/Poster,27,Adult,Male,Cis-Man,Black or African American,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+971888,Craigslist,37,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+399935,Friend,26,Adult,Male,Cis-Man,Multiple Races,Unsure,Eligible,Eligible,Eligible,Yes,Eligible
+774409,Craigslist,61,Older-Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+696473,Flyer/Poster,28,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,No,washout
+678342,Instagram,67,Older-Adult,Male,Prefer not to answer,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+542414,Friend,24,Youth,Female,Cis-Woman,White,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+971502,Flyer/Poster,25,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+797117,Craigslist,32,Adult,Male,Cis-Man,Multiple Races,No,Eligible,Eligible,Eligible,No,washout
+378312,internet,55,Middle-aged,Female,Prefer not to answer,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+618546,Craigslist,37,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+856342,Today@Brown,58,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+964374,internet,39,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,No,washout
+197181,Craigslist,45,Middle-aged,Male,Cis-Man,Multiple Races,No,Eligible,Eligible,Eligible,Yes,Eligible
+917387,Friend,23,Youth,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+634125,Today@Brown,19,Youth,Male,Cis-Man,Asian,No,Eligible,Eligible,Eligible,Yes,Eligible
+973333,Friend,26,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+968261,internet,37,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+151120,Today@Brown,38,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+755467,internet,22,Youth,Female,Cis-Woman,American Indian or Alaska Native,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+705335,Flyer/Poster,30,Adult,Female,Non-binary,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+182330,Referral from another study,47,Middle-aged,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+769703,Craigslist,38,Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+925122,internet,22,Youth,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+647244,Craigslist,33,Adult,Female,Cis-Woman,Black or African American,No,Eligible,Eligible,Eligible,Yes,Eligible
+386251,Craigslist,63,Older-Adult,Female,Cis-Woman,Black or African American,No,Eligible,Eligible,Eligible,Yes,Eligible
+899240,internet,21,Youth,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+860828,internet,33,Adult,Female,Cis-Woman,Multiple Races,Unsure,Eligible,Eligible,Eligible,Yes,Eligible
+860828,internet,33,Adult,Female,Cis-Woman,Multiple Races,Unsure,Eligible,washout,NA,No,NA
+832452,Multiple,37,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+324395,Flyer/Poster,23,Youth,Male,Cis-Man,White,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+570141,Referral from another study,31,Adult,Female,Cis-Woman,Unsure,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+652775,Flyer/Poster,29,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+459924,Craigslist,47,Middle-aged,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+747640,Today@Brown,20,Youth,Female,Cis-Woman,Unsure,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+903711,Facebook,22,Youth,Female,Cis-Woman,Unsure,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+509521,internet,22,Youth,Female,Cis-Woman,Asian,No,Eligible,Eligible,Eligible,Yes,Eligible
+973807,Craigslist,34,Adult,Female,Non-binary,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+161771,Flyer/Poster,19,Youth,Male,Cis-Man,Unsure,Yes,Eligible,Eligible,Eligible,No,washout
+459693,Craigslist,62,Older-Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+225027,Flyer/Poster,28,Adult,Female,Non-binary,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+146422,Referral from another study,28,Adult,Female,Genderqueer/gender non-conforming,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+155955,Referral from another study,21,Youth,Female,Multiple Identities,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+199516,internet,26,Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+886602,Flyer/Poster,29,Adult,Female,Genderqueer/gender non-conforming,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+920260,Flyer/Poster,23,Youth,Female,Cis-Woman,Multiple Races,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+737029,Referral from another study,25,Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+175399,Referral from another study,21,Youth,Female,Non-binary,Multiple Races,No,Eligible,Eligible,Eligible,Yes,Eligible
+566573,email listserv,23,Youth,Female,Cis-Woman,Asian,No,Eligible,Eligible,Eligible,Yes,Eligible
+361695,Other,70,Older-Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+599807,Today@Brown,32,Adult,Male,Non-binary,Black or African American,No,Eligible,Eligible,Eligible,Yes,Eligible
+840169,Flyer/Poster,18,Youth,Female,Multiple Identities,Multiple Races,No,Eligible,Eligible,Eligible,Yes,Eligible
+932689,Friend,52,Middle-aged,Female,Prefer not to answer,White,No,Eligible,Eligible,Eligible,No,washout
+702993,Friend,30,Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+618808,Flyer/Poster,49,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,No,washout
+124628,internet,29,Adult,Female,Cis-Woman,Black or African American,No,Eligible,Eligible,Eligible,Yes,Eligible
+299004,Flyer/Poster,25,Adult,Female,Multiple Identities,Asian,No,Eligible,Eligible,Eligible,Yes,Eligible
+351888,Today@Brown,19,Youth,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+951323,Friend,42,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+622419,Flyer/Poster,19,Youth,Male,Cis-Man,American Indian or Alaska Native,Yes,Eligible,Eligible,Eligible,No,washout
+125144,Referral from another study,45,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+715197,Flyer/Poster,19,Youth,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+977840,Friend,22,Youth,Male,Cis-Man,Asian,No,Eligible,Eligible,Eligible,Yes,Eligible
+325853,Referral from another study,50,Middle-aged,Female,Cis-Woman,Multiple Races,No,Eligible,Eligible,Eligible,Yes,Eligible
+692486,Referral from another study,29,Adult,Male,Non-binary,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+993802,Instagram,18,Youth,Female,Cis-Woman,White,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+392321,Referral from another study,29,Adult,Female,Cis-Woman,White,Yes,Eligible,Eligible,Eligible,Yes,Eligible
+533128,Instagram,49,Middle-aged,Female,Genderqueer/gender non-conforming,White,No,Eligible,Eligible,Eligible,No,washout
+201450,Referral from another study,21,Youth,Female,Cis-Woman,Multiple Races,No,Eligible,Eligible,Eligible,Yes,Eligible
+347803,Referral from another study,22,Youth,Female,Multiple Identities,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+138798,Referral from another study,36,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+471226,Flyer/Poster,27,Adult,Female,Cis-Woman,Black or African American,No,Eligible,Eligible,Eligible,Yes,Eligible
+476997,Referral from another study,44,Adult,Male,Cis-Man,Black or African American,No,Eligible,Eligible,Eligible,Yes,Eligible
+227311,Flyer/Poster,21,Youth,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+424137,Friend,23,Youth,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+317081,Instagram,25,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+326338,Referral from another study,27,Adult,Female,Cis-Woman,Multiple Races,No,Eligible,Eligible,Eligible,Yes,Eligible
+231525,internet,46,Middle-aged,Female,Cis-Woman,Black or African American,No,Eligible,Eligible,Eligible,Yes,Eligible
+909022,Craigslist,55,Middle-aged,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+933708,Craigslist,48,Middle-aged,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,No,washout
+182866,Craigslist,45,Middle-aged,Male,Cis-Man,Unsure,Yes,Eligible,Eligible,NA,Yes,NA
+503888,Craigslist,56,Middle-aged,Male,Multiple Identities,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+163416,Flyer/Poster,26,Adult,Female,Multiple Identities,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+667100,Craigslist,58,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+385225,Craigslist,63,Older-Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+273487,Craigslist,50,Middle-aged,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+281601,Craigslist,48,Middle-aged,Female,Cis-Woman,White,Yes,Eligible,Eligible,Eligible,No,washout
+145405,Friend,58,Middle-aged,Female,Cis-Woman,Multiple Races,No,Eligible,Eligible,Eligible,Yes,Eligible
+167544,Friend,51,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+373678,email listserv,73,Older-Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+925232,Craigslist,46,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Yes,Eligible
+838268,internet,45,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,No,washout
+144564,email listserv,41,Adult,Female,Cis-Woman,Asian,No,Ineligible,NA,NA,No,NA
+565408,email listserv,50,Middle-aged,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+828053,Multiple,27,Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+380843,Referral from another study,29,Adult,Female,Cis-Woman,Multiple Races,No,Eligible,washout,NA,No,NA
+449176,email listserv,36,Adult,Female,Cis-Woman,Asian,No,Eligible,Eligible,washout,No,washout
+302938,Flyer/Poster,26,Adult,Male,Cis-Man,Unsure,No,Eligible,Eligible,washout,No,washout
+615042,Flyer/Poster,31,Adult,Female,Cis-Woman,Unsure,Yes,Eligible,washout,NA,No,NA
+880032,Friend,32,Adult,Male,Multiple Identities,White,No,Eligible,washout,NA,No,NA
+815929,Craigslist,38,Adult,Female,Cis-Woman,White,No,Eligible,NA,NA,No,NA
+434688,Friend,32,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+161921,Instagram,19,Youth,Female,Cis-Woman,White,Yes,Ineligible,NA,NA,No,NA
+187060,Today@Brown,27,Adult,Female,Multiple Identities,Black or African American,No,Eligible,washout,NA,No,NA
+935612,Today@Brown,18,Youth,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+250112,Multiple,18,Youth,Male,Cis-Man,White,Unsure,Ineligible,NA,NA,No,NA
+736281,internet,31,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+189191,Flyer/Poster,22,Youth,Female,Cis-Woman,Black or African American,No,Eligible,washout,NA,No,NA
+260351,internet,38,Adult,Female,Cis-Woman,White,No,Eligible,NA,NA,No,NA
+552889,Today@Brown,21,Youth,Female,Non-binary,White,No,Ineligible,NA,NA,No,NA
+423434,Today@Brown,44,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+799396,Friend,19,Youth,Female,Non-binary,Multiple Races,No,Eligible,NA,NA,No,NA
+453353,Craigslist,25,Adult,Female,Cis-Man,White,No,Eligible,Eligible,washout,No,washout
+744651,Flyer/Poster,25,Adult,Female,Cis-Woman,Asian,No,Eligible,washout,NA,No,NA
+201068,Flyer/Poster,42,Adult,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+209288,reddit,54,Middle-aged,Male,Cis-Man,White,No,Eligible,NA,NA,No,NA
+870086,reddit,23,Youth,Female,Non-binary,Asian,No,Ineligible,NA,NA,No,NA
+553659,reddit,53,Middle-aged,Male,Cis-Man,White,No,Eligible,NA,NA,No,NA
+383418,reddit,21,Youth,Male,Cis-Man,White,No,Eligible,NA,NA,No,NA
+409806,internet,39,Adult,Female,Prefer not to answer,White,No,Eligible,Eligible,washout,No,washout
+335495,Friend,41,Adult,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+115861,Friend,32,Adult,Female,Cis-Woman,Asian,No,Eligible,Eligible,washout,No,washout
+254408,Today@Brown,33,Adult,Male,Cis-Man,Black or African American,Yes,Eligible,washout,NA,No,NA
+442569,Referral from another study,27,Adult,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+270638,Flyer/Poster,25,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+566866,Friend,27,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+493005,Friend,26,Adult,Male,Cis-Man,Black or African American,No,Eligible,washout,NA,No,NA
+847056,Flyer/Poster,58,Middle-aged,Male,Prefer not to answer,White,No,Eligible,Eligible,washout,No,washout
+464816,internet,43,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+626580,Flyer/Poster,21,Youth,Male,Cis-Man,Unsure,Yes,Eligible,washout,NA,No,NA
+644576,Flyer/Poster,20,Youth,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+229544,Other,31,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+277366,internet,21,Youth,Female,Non-binary,White,Yes,Eligible,Eligible,washout,No,washout
+408740,internet,22,Youth,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+250403,Multiple,36,Adult,Female,Cis-Woman,American Indian or Alaska Native,Yes,Eligible,NA,NA,No,NA
+738604,Flyer/Poster,22,Youth,Female,Cis-Woman,Black or African American,No,Eligible,washout,NA,No,NA
+252503,Flyer/Poster,20,Youth,Male,Cis-Man,Multiple Races,No,Eligible,washout,NA,No,NA
+980614,Craigslist,27,Adult,Female,Cis-Woman,White,No,Eligible,NA,NA,No,NA
+312280,Flyer/Poster,22,Youth,Male,Transgender Woman/Trans Woman,White,No,Eligible,Eligible,washout,No,washout
+865555,Craigslist,27,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+744476,Today@Brown,21,Youth,Female,Multiple Identities,White,Yes,Eligible,washout,NA,No,NA
+810026,Today@Brown,24,Youth,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+651326,Flyer/Poster,27,Adult,Female,Cis-Woman,Black or African American,No,Eligible,washout,NA,No,NA
+763340,Multiple,24,Youth,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+763340,Multiple,24,Youth,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+245807,Today@Brown,21,Youth,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+238316,Referral from another study,35,Adult,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+430015,Flyer/Poster,26,Adult,Female,Cis-Woman,Multiple Races,No,Eligible,NA,NA,No,NA
+592724,Flyer/Poster,24,Youth,Female,Cis-Woman,White,Yes,Eligible,washout,NA,No,NA
+606798,Other,23,Youth,Male,Cis-Man,Black or African American,No,Eligible,washout,NA,No,NA
+826365,internet,21,Youth,Female,Cis-Woman,Multiple Races,Yes,Ineligible,NA,NA,No,NA
+333762,Referral from another study,18,Youth,Female,Cis-Woman,White,No,Eligible,Eligible,washout,No,washout
+560870,Referral from another study,63,Older-Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+881084,Facebook,29,Adult,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+374409,Flyer/Poster,27,Adult,Female,Multiple Identities,Unsure,Yes,Eligible,washout,NA,No,NA
+608068,Facebook,65,Older-Adult,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+301279,Friend,28,Adult,Female,Cis-Man,White,No,Eligible,Eligible,washout,No,washout
+301279,Friend,28,Adult,Female,Cis-Man,White,No,Eligible,washout,NA,No,NA
+301279,Friend,28,Adult,Female,Cis-Man,White,No,Eligible,washout,NA,No,NA
+340814,Facebook,36,Adult,Male,Cis-Man,Multiple Races,No,Eligible,washout,NA,No,NA
+913439,Referral from another study,24,Youth,Female,Cis-Woman,Unsure,Yes,Eligible,washout,NA,No,NA
+403426,Referral from another study,27,Adult,Male,Multiple Identities,White,No,Eligible,washout,NA,No,NA
+403426,Referral from another study,27,Adult,Male,Multiple Identities,White,No,Eligible,washout,NA,No,NA
+403426,Referral from another study,27,Adult,Male,Multiple Identities,White,No,Eligible,washout,NA,No,NA
+591893,Flyer/Poster,23,Youth,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+885899,Instagram,20,Youth,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+411034,Flyer/Poster,28,Adult,Male,Multiple Identities,White,Unsure,Eligible,washout,NA,No,NA
+411034,Flyer/Poster,28,Adult,Male,Multiple Identities,White,Unsure,Eligible,washout,NA,No,NA
+296284,email listserv,22,Youth,Female,Cis-Woman,Asian,No,Eligible,washout,NA,No,NA
+889835,Friend,34,Adult,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+689795,Flyer/Poster,24,Youth,Male,Cis-Man,Unsure,Yes,Eligible,washout,NA,No,NA
+689795,Flyer/Poster,24,Youth,Male,Cis-Man,Unsure,Yes,Eligible,washout,NA,No,NA
+689795,Flyer/Poster,24,Youth,Male,Cis-Man,Unsure,Yes,Eligible,washout,NA,No,NA
+689795,Flyer/Poster,24,Youth,Male,Cis-Man,Unsure,Yes,Eligible,washout,NA,No,NA
+689795,Flyer/Poster,24,Youth,Male,Cis-Man,Unsure,Yes,Eligible,washout,NA,No,NA
+347904,Other,36,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+975162,email listserv,23,Youth,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+975162,email listserv,23,Youth,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+207293,Other,42,Adult,Male,Cis-Man,White,Yes,Eligible,NA,NA,No,NA
+868288,internet,30,Adult,Female,Cis-Woman,Black or African American,No,Ineligible,NA,NA,No,NA
+139248,Facebook,61,Older-Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+703701,Instagram,26,Adult,Female,Cis-Woman,White,Yes,Eligible,Eligible,washout,No,washout
+296945,Today@Brown,34,Adult,Male,Prefer not to answer,Black or African American,Unsure,Eligible,washout,NA,No,NA
+565073,Flyer/Poster,25,Adult,Female,Non-binary,White,No,Eligible,washout,NA,No,NA
+997360,Flyer/Poster,30,Adult,Female,Non-binary,Black or African American,No,Eligible,Eligible,washout,No,washout
+241575,Flyer/Poster,36,Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+624428,Flyer/Poster,26,Adult,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+118660,Instagram,21,Youth,Female,Multiple Identities,White,No,Ineligible,NA,NA,No,NA
+117691,Facebook,58,Middle-aged,Male,Cis-Man,Black or African American,No,Eligible,washout,NA,No,NA
+883166,Flyer/Poster,29,Adult,Female,Cis-Woman,White,No,Eligible,NA,NA,No,NA
+385999,Craigslist,47,Middle-aged,Female,Prefer not to answer,White,No,Ineligible,NA,NA,No,NA
+481281,Flyer/Poster,23,Youth,Female,Cis-Man,Unsure,Yes,Eligible,washout,NA,No,NA
+265061,Facebook,29,Adult,Female,Cis-Woman,Black or African American,No,Eligible,washout,NA,No,NA
+493216,Craigslist,46,Middle-aged,Female,Prefer not to answer,White,No,Eligible,Eligible,washout,No,washout
+633362,Craigslist,24,Youth,Female,Prefer not to answer,Black or African American,No,Ineligible,NA,NA,No,NA
+801481,Instagram,25,Adult,Male,Prefer not to answer,Unsure,Yes,Eligible,washout,NA,No,NA
+786794,Craigslist,27,Adult,Male,Cis-Man,Unsure,Yes,Eligible,Eligible,washout,No,washout
+879687,Craigslist,37,Adult,Female,Prefer not to answer,White,No,Eligible,washout,NA,No,NA
+679936,Craigslist,70,Older-Adult,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+165606,Craigslist,48,Middle-aged,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+132351,Craigslist,35,Adult,Male,Cis-Man,Multiple Races,No,Eligible,washout,NA,No,NA
+225597,Craigslist,23,Youth,Female,Non-binary,White,No,Eligible,Eligible,washout,No,washout
+112456,Craigslist,39,Adult,Male,Cis-Man,Unsure,Yes,Eligible,Eligible,washout,No,washout
+827728,Craigslist,54,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,washout,No,washout
+245665,Friend,55,Middle-aged,Female,Cis-Woman,Black or African American,No,Ineligible,NA,NA,No,NA
+384231,email listserv,68,Older-Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+542325,Instagram,46,Middle-aged,Female,Cis-Woman,White,No,Eligible,NA,NA,No,NA
+519096,Craigslist,26,Adult,Male,Cis-Man,White,No,Eligible,NA,NA,No,NA
+960091,Craigslist,37,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,washout,No,washout
+843754,Craigslist,33,Adult,Male,Cis-Man,Black or African American,No,Eligible,washout,NA,No,NA
+179256,Facebook,36,Adult,Female,Non-binary,Black or African American,No,Eligible,washout,NA,No,NA
+281435,Craigslist,38,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,washout,No,washout
+281435,Craigslist,38,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+134720,Craigslist,44,Adult,Male,Cis-Man,Multiple Races,No,Eligible,washout,NA,No,NA
+689629,Flyer/Poster,45,Middle-aged,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+108062,Craigslist,40,Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+375966,Craigslist,39,Adult,Male,Cis-Man,White,Yes,Eligible,washout,NA,No,NA
+180619,internet,60,Older-Adult,Female,Non-binary,White,No,Eligible,washout,NA,No,NA
+255540,Craigslist,66,Older-Adult,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+427029,Craigslist,44,Adult,Male,Cis-Man,Black or African American,No,Ineligible,NA,NA,No,NA
+537880,Craigslist,33,Adult,Female,Cis-Woman,White,No,Eligible,NA,NA,No,NA
+938054,Craigslist,43,Adult,Male,Prefer not to answer,White,No,Eligible,washout,NA,No,NA
+778935,Craigslist,37,Adult,Male,Cis-Man,Multiple Races,Unsure,Eligible,washout,NA,No,NA
+793609,Craigslist,59,Middle-aged,Male,Cis-Man,White,No,Eligible,NA,NA,No,NA
+295003,Craigslist,34,Adult,Female,Cis-Woman,Black or African American,No,Eligible,NA,NA,No,NA
+259305,Referral from another study,31,Adult,Male,Cis-Man,Black or African American,Yes,Eligible,washout,NA,No,NA
+459441,Craigslist,38,Adult,Female,Cis-Woman,White,No,Eligible,NA,NA,No,NA
+413355,Craigslist,34,Adult,Male,Cis-Man,White,No,Eligible,Eligible,washout,No,washout
+665111,Craigslist,27,Adult,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+895170,Craigslist,31,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+252777,Craigslist,47,Middle-aged,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+506041,Today@Brown,22,Youth,Female,Non-binary,Black or African American,No,Eligible,washout,NA,No,NA
+993801,Craigslist,37,Adult,Female,Cis-Man,White,No,Eligible,Eligible,washout,No,washout
+941808,Craigslist,49,Middle-aged,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+348407,Flyer/Poster,24,Youth,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+157022,Craigslist,23,Youth,Male,Prefer not to answer,Black or African American,Yes,Ineligible,NA,NA,No,NA
+474921,Craigslist,40,Adult,Male,Cis-Man,White,No,Eligible,Eligible,washout,No,washout
+991957,Today@Brown,38,Adult,Female,Cis-Woman,White,Yes,Eligible,washout,NA,No,NA
+391447,Craigslist,41,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+564167,Craigslist,52,Middle-aged,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+873564,Craigslist,30,Adult,Male,Cis-Man,Multiple Races,No,Eligible,washout,NA,No,NA
+296914,Friend,37,Adult,Female,Cis-Woman,Black or African American,No,Ineligible,NA,NA,No,NA
+385206,internet,55,Middle-aged,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+781930,Multiple,23,Youth,Female,Cis-Man,White,No,Eligible,Eligible,washout,No,washout
+992594,internet,28,Adult,Male,Cis-Man,White,No,Eligible,Eligible,washout,No,washout
+899562,Craigslist,28,Adult,Female,Cis-Woman,White,No,Eligible,NA,NA,No,NA
+183297,Referral from another study,55,Middle-aged,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+762740,Craigslist,36,Adult,Male,Cis-Man,Black or African American,No,Eligible,Eligible,washout,No,washout
+453702,Today@Brown,50,Middle-aged,Female,Prefer not to answer,Unsure,No,Eligible,washout,NA,No,NA
+297478,Today@Brown,20,Youth,Male,Transgender Woman/Trans Woman,White,Unsure,Ineligible,NA,NA,No,NA
+366699,Craigslist,39,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,washout,No,washout
+432972,Craigslist,27,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,washout,No,washout
+967649,Craigslist,59,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,washout,No,washout
+616196,Flyer/Poster,23,Youth,Female,Multiple Identities,Asian,No,Ineligible,NA,NA,No,NA
+961081,Craigslist,56,Middle-aged,Female,Cis-Woman,White,Yes,Eligible,NA,NA,No,NA
+497282,Friend,24,Youth,Male,Cis-Man,Black or African American,Yes,Eligible,Eligible,washout,No,washout
+314900,Other,39,Adult,Male,Cis-Man,Black or African American,No,Ineligible,NA,NA,No,NA
+408307,Referral from another study,27,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+925415,Flyer/Poster,22,Youth,Male,Cis-Man,White,Yes,Eligible,washout,NA,No,NA
+911029,Craigslist,20,Youth,Male,Cis-Man,Multiple Races,No,Eligible,washout,NA,No,NA
+586173,Craigslist,40,Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+153331,Craigslist,71,Older-Adult,Female,Cis-Woman,White,No,Eligible,NA,NA,No,NA
+540172,Multiple,38,Adult,Male,Non-binary,White,No,Eligible,washout,NA,No,NA
+402590,Today@Brown,21,Youth,Female,Non-binary,American Indian or Alaska Native,Yes,Ineligible,NA,NA,No,NA
+499044,Other,54,Middle-aged,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+736501,Instagram,48,Middle-aged,Female,Cis-Woman,Black or African American,No,Ineligible,NA,NA,No,NA
+563708,Today@Brown,21,Youth,Male,Prefer not to answer,Asian,No,Eligible,washout,NA,No,NA
+422426,Friend,26,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+575551,Craigslist,42,Adult,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+695142,Craigslist,55,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,washout,No,washout
+220197,Flyer/Poster,24,Youth,Female,Non-binary,White,No,Eligible,washout,NA,No,NA
+643510,Craigslist,48,Middle-aged,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+922339,Craigslist,23,Youth,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+900345,Friend,29,Adult,Male,Cis-Man,Black or African American,Yes,Eligible,Eligible,washout,No,washout
+412493,Instagram,30,Adult,Female,Non-binary,White,No,Eligible,washout,NA,No,NA
+597441,Referral from another study,22,Youth,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+424679,Instagram,25,Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+501858,Today@Brown,27,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,washout,No,washout
+516369,Friend,38,Adult,Male,Cis-Man,Asian,No,Eligible,washout,NA,No,NA
+355566,Craigslist,20,Youth,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+587782,Instagram,40,Adult,Female,Non-binary,Black or African American,No,Ineligible,NA,NA,No,NA
+836485,Referral from another study,25,Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+250700,reddit,19,Youth,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+202098,internet,25,Adult,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+606662,internet,36,Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+822445,Friend,52,Middle-aged,Male,Cis-Man,White,No,Eligible,NA,NA,No,NA
+767907,Flyer/Poster,29,Adult,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+333337,Flyer/Poster,51,Middle-aged,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+670118,Flyer/Poster,25,Adult,Female,Cis-Woman,Black or African American,Yes,Ineligible,NA,NA,No,NA
+917775,Flyer/Poster,33,Adult,Female,Transgender Man/Trans Man,White,No,Eligible,washout,NA,No,NA
+186392,Flyer/Poster,21,Youth,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+980839,internet,47,Middle-aged,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+382337,Friend,20,Youth,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+661592,Other,32,Adult,Female,Prefer not to answer,White,Yes,Eligible,washout,NA,No,NA
+539354,Flyer/Poster,24,Youth,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+651303,Friend,28,Adult,Female,Non-binary,Black or African American,No,Ineligible,NA,NA,No,NA
+120279,Flyer/Poster,30,Adult,Male,Non-binary,White,No,Eligible,washout,NA,No,NA
+932935,Multiple,32,Adult,Male,Cis-Man,Multiple Races,No,Ineligible,NA,NA,No,NA
+763655,Craigslist,38,Adult,Male,Cis-Man,Black or African American,No,Eligible,Eligible,washout,No,washout
+419544,Referral from another study,41,Adult,Male,Cis-Man,Black or African American,No,Ineligible,NA,NA,No,NA
+445872,Flyer/Poster,21,Youth,Female,Non-binary,Asian,No,Eligible,washout,NA,No,NA
+553407,Flyer/Poster,24,Youth,Female,Cis-Woman,White,No,Eligible,NA,NA,No,NA
+273916,Instagram,22,Youth,Female,Cis-Woman,Multiple Races,No,Ineligible,NA,NA,No,NA
+685476,Referral from another study,19,Youth,Female,Genderqueer/gender non-conforming,White,No,Ineligible,NA,NA,No,NA
+758090,Instagram,21,Youth,Female,Cis-Woman,White,Yes,Ineligible,NA,NA,No,NA
+232105,Friend,34,Adult,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+237494,Friend,31,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,NA,No,NA
+135603,Craigslist,26,Adult,Female,Cis-Woman,Black or African American,No,Eligible,washout,NA,No,NA
+226682,Craigslist,50,Middle-aged,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+346781,Referral from another study,20,Youth,Female,Cis-Woman,White,Yes,Eligible,Eligible,washout,No,washout
+887767,Craigslist,20,Youth,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+171548,Instagram,48,Middle-aged,Female,Cis-Woman,Unsure,Yes,Eligible,NA,NA,No,NA
+207499,Referral from another study,32,Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+951684,reddit,34,Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+968904,reddit,21,Youth,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+227819,reddit,29,Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+985265,reddit,36,Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+868641,internet,40,Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+303963,Friend,66,Older-Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+635905,reddit,40,Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+257283,reddit,33,Adult,Male,Cis-Man,Unsure,Yes,Ineligible,NA,NA,No,NA
+859361,Referral from another study,43,Adult,Male,Cis-Man,American Indian or Alaska Native,No,Ineligible,NA,NA,No,NA
+149061,reddit,30,Adult,Male,Cis-Man,Multiple Races,No,Ineligible,NA,NA,No,NA
+128865,reddit,41,Adult,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+224453,Flyer/Poster,22,Youth,Female,Cis-Woman,Multiple Races,Yes,Eligible,washout,NA,No,NA
+415218,Instagram,22,Youth,Male,Cis-Man,White,Yes,Ineligible,NA,NA,No,NA
+188708,Referral from another study,23,Youth,Female,Cis-Woman,Black or African American,No,Eligible,Eligible,washout,No,washout
+999591,Facebook,49,Middle-aged,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+951122,Instagram,22,Youth,Female,Multiple Identities,White,No,Ineligible,NA,NA,No,NA
+441708,internet,22,Youth,Female,Cis-Woman,Black or African American,Yes,Eligible,washout,NA,No,NA
+184822,Referral from another study,22,Youth,Female,Prefer not to answer,White,Yes,Ineligible,NA,NA,No,NA
+410904,Referral from another study,21,Youth,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+355375,Referral from another study,56,Middle-aged,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+365102,internet,38,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+464939,Facebook,56,Middle-aged,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+604889,Friend,37,Adult,Female,Cis-Woman,American Indian or Alaska Native,No,Eligible,Eligible,washout,No,washout
+985971,Flyer/Poster,18,Youth,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+211790,Friend,29,Adult,Female,Cis-Woman,Black or African American,Yes,Eligible,washout,NA,No,NA
+372836,Flyer/Poster,69,Older-Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+105952,Facebook,32,Adult,Female,Cis-Woman,Unsure,Yes,Ineligible,NA,NA,No,NA
+390070,Referral from another study,31,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+427876,internet,45,Middle-aged,Male,Prefer not to answer,American Indian or Alaska Native,No,Eligible,washout,NA,No,NA
+929564,Flyer/Poster,23,Youth,Female,Non-binary,White,No,Ineligible,NA,NA,No,NA
+261390,Today@Brown,21,Youth,Male,Transgender Woman/Trans Woman,Multiple Races,No,Eligible,washout,NA,No,NA
+550672,Referral from another study,37,Adult,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+431316,Craigslist,59,Middle-aged,Male,Cis-Man,Black or African American,No,Eligible,washout,NA,No,NA
+118465,Friend,22,Youth,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+308710,Friend,33,Adult,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+484111,Today@Brown,54,Middle-aged,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+419974,Referral from another study,26,Adult,Female,Multiple Identities,White,Yes,Eligible,washout,NA,No,NA
+544285,internet,30,Adult,Female,Cis-Woman,Multiple Races,No,Eligible,Eligible,washout,No,washout
+733010,email listserv,23,Youth,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+750497,Facebook,57,Middle-aged,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+264490,Instagram,46,Middle-aged,Male,Cis-Man,Multiple Races,Yes,Ineligible,NA,NA,No,NA
+556509,Multiple,26,Adult,Female,Transgender Man/Trans Man,White,No,Ineligible,NA,NA,No,NA
+695419,Instagram,29,Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+402331,internet,39,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,washout,No,washout
+578196,Referral from another study,42,Adult,Female,Prefer not to answer,White,No,Ineligible,NA,NA,No,NA
+834406,Instagram,26,Adult,Female,Cis-Woman,Unsure,Yes,Ineligible,NA,NA,No,NA
+115638,Today@Brown,26,Adult,Female,Cis-Woman,American Indian or Alaska Native,Yes,Ineligible,NA,NA,No,NA
+222997,Flyer/Poster,35,Adult,Male,Cis-Man,Asian,No,Eligible,washout,NA,No,NA
+228770,Instagram,41,Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+920516,Friend,29,Adult,Male,Cis-Man,Asian,No,Eligible,washout,NA,No,NA
+934896,Referral from another study,60,Older-Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+572747,Facebook,61,Older-Adult,Female,Cis-Woman,White,No,Eligible,Eligible,washout,No,washout
+828505,Referral from another study,21,Youth,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+811484,Flyer/Poster,26,Adult,Male,Cis-Man,Asian,No,Eligible,NA,NA,No,NA
+354202,Referral from another study,25,Adult,Female,Cis-Woman,Asian,No,Eligible,washout,NA,No,NA
+303094,Instagram,20,Youth,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+206657,internet,27,Adult,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+811006,Today@Brown,59,Middle-aged,Female,Cis-Woman,White,No,Eligible,Eligible,washout,No,washout
+955166,Referral from another study,40,Adult,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+810060,Referral from another study,24,Youth,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+693022,Friend,30,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+842264,Referral from another study,25,Adult,Female,Cis-Woman,Unsure,Yes,Eligible,washout,NA,No,NA
+810433,Referral from another study,24,Youth,Female,Genderqueer/gender non-conforming,White,No,Eligible,washout,NA,No,NA
+314084,Referral from another study,26,Adult,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+485961,Instagram,39,Adult,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+165517,Instagram,43,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+199813,Referral from another study,26,Adult,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+505678,internet,43,Adult,Female,Cis-Man,White,No,Eligible,washout,NA,No,NA
+398409,Friend,23,Youth,Male,Cis-Man,White,Yes,Eligible,NA,NA,No,NA
+486707,Multiple,32,Adult,Male,Prefer not to answer,White,No,Eligible,washout,NA,No,NA
+230534,Facebook,24,Youth,Female,Cis-Woman,Black or African American,No,Ineligible,NA,NA,No,NA
+427432,Today@Brown,30,Adult,Female,Transgender Man/Trans Man,Black or African American,No,Ineligible,NA,NA,No,NA
+571962,Referral from another study,40,Adult,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+337389,Referral from another study,30,Adult,Female,Multiple Identities,White,No,Eligible,washout,NA,No,NA
+363356,internet,35,Adult,Female,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+852128,Instagram,29,Adult,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+137367,Friend,20,Youth,Female,Cis-Woman,White,No,Eligible,NA,NA,No,NA
+284412,Flyer/Poster,22,Youth,Female,Cis-Woman,Asian,No,Eligible,NA,NA,No,NA
+776258,internet,23,Youth,Female,Cis-Woman,White,No,Eligible,NA,NA,No,NA
+239270,Facebook,59,Middle-aged,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+851691,Facebook,20,Youth,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+423907,Facebook,30,Adult,Female,Prefer not to answer,White,No,Ineligible,NA,NA,No,NA
+412759,internet,20,Youth,Female,Genderqueer/gender non-conforming,Multiple Races,Yes,Eligible,washout,NA,No,NA
+502216,Craigslist,54,Middle-aged,Female,Cis-Woman,Multiple Races,No,Eligible,Eligible,washout,No,washout
+546954,Craigslist,46,Middle-aged,Male,Cis-Man,Unsure,Yes,Eligible,Eligible,washout,No,washout
+935670,Craigslist,65,Older-Adult,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+551220,Craigslist,45,Middle-aged,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+625401,Referral from another study,23,Youth,Female,Cis-Woman,Black or African American,No,Ineligible,NA,NA,No,NA
+202640,Craigslist,43,Adult,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+420507,Craigslist,51,Middle-aged,Male,Cis-Man,White,No,Eligible,NA,NA,No,NA
+277355,Craigslist,44,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+390361,Craigslist,45,Middle-aged,Female,Prefer not to answer,White,No,Eligible,Eligible,washout,No,washout
+763830,Craigslist,51,Middle-aged,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+803795,Other,50,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,washout,No,washout
+192331,Craigslist,50,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,washout,No,washout
+697063,Craigslist,52,Middle-aged,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+416076,Craigslist,41,Adult,Male,Cis-Man,American Indian or Alaska Native,No,Eligible,washout,NA,No,NA
+640094,Friend,26,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+587555,Craigslist,47,Middle-aged,Female,Cis-Man,Multiple Races,Yes,Eligible,washout,NA,No,NA
+993958,Craigslist,58,Middle-aged,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+290055,Today@Brown,21,Youth,Female,Cis-Woman,Asian,No,Eligible,washout,NA,No,NA
+297581,Craigslist,54,Middle-aged,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+979990,Craigslist,59,Middle-aged,Female,Cis-Woman,White,No,Eligible,NA,NA,No,NA
+514522,Multiple,19,Youth,Female,Transgender Man/Trans Man,White,No,Eligible,NA,NA,No,NA
+758162,Craigslist,62,Older-Adult,Male,Cis-Man,White,No,Eligible,Eligible,washout,No,washout
+212009,internet,35,Adult,Female,Cis-Woman,Multiple Races,Unsure,Ineligible,NA,NA,No,NA
+523544,Referral from another study,21,Youth,Male,Cis-Man,Unsure,Yes,Eligible,washout,NA,No,NA
+969948,Craigslist,54,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,washout,No,washout
+969948,Craigslist,54,Middle-aged,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+698365,Referral from another study,29,Adult,Male,Non-binary,White,No,Eligible,NA,NA,No,NA
+827082,Referral from another study,21,Youth,Female,Cis-Woman,Asian,No,Ineligible,NA,NA,No,NA
+614900,Craigslist,51,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,washout,No,washout
+399871,Facebook,36,Adult,Female,Cis-Woman,Multiple Races,No,Ineligible,NA,NA,No,NA
+506172,Craigslist,29,Adult,Male,Cis-Man,Multiple Races,No,Eligible,washout,NA,No,NA
+321554,Today@Brown,19,Youth,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+856121,Today@Brown,25,Adult,Female,Cis-Woman,Asian,No,Ineligible,NA,NA,No,NA
+868196,Referral from another study,28,Adult,Male,Cis-Man,Asian,No,Eligible,washout,NA,No,NA
+112629,Craigslist,66,Older-Adult,Female,Prefer not to answer,White,No,Eligible,washout,NA,No,NA
+366859,Referral from another study,21,Youth,Female,Cis-Woman,Asian,No,Eligible,NA,NA,No,NA
+325143,Facebook,33,Adult,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+844020,Multiple,49,Middle-aged,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+210602,Flyer/Poster,30,Adult,Female,Cis-Woman,Multiple Races,No,Eligible,NA,NA,No,NA
+641913,Flyer/Poster,19,Youth,Female,Cis-Woman,White,Yes,Eligible,NA,NA,No,NA
+192224,Craigslist,57,Middle-aged,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+247176,Instagram,30,Adult,Female,Cis-Woman,Asian,No,Ineligible,NA,NA,No,NA
+588290,Craigslist,44,Adult,Male,Non-binary,White,No,Eligible,NA,NA,No,NA
+466915,Friend,31,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+646173,Facebook,68,Older-Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+445726,Today@Brown,24,Youth,Female,Non-binary,White,No,Ineligible,NA,NA,No,NA
+149278,Referral from another study,23,Youth,Female,Cis-Woman,White,No,Eligible,NA,NA,No,NA
+520973,Craigslist,71,Older-Adult,Female,Cis-Woman,White,No,Eligible,Eligible,washout,No,washout
+652306,Multiple,22,Youth,Female,Transgender Man/Trans Man,Black or African American,No,Eligible,NA,NA,No,NA
+701234,Referral from another study,23,Youth,Male,Transgender Woman/Trans Woman,White,No,Eligible,NA,NA,No,NA
+925088,Multiple,27,Adult,Female,Cis-Woman,Asian,No,Eligible,NA,NA,No,NA
+885424,Craigslist,66,Older-Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+757950,Instagram,22,Youth,Male,Cis-Man,White,Yes,Eligible,NA,NA,No,NA
+159958,Other,46,Middle-aged,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+317238,Other,72,Older-Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+824524,Other,36,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+413611,Other,54,Middle-aged,Male,Cis-Man,Black or African American,No,Eligible,washout,NA,No,NA
+100875,Instagram,19,Youth,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+156693,Instagram,22,Youth,Female,Multiple Identities,White,No,Eligible,NA,NA,No,NA
+807287,Instagram,41,Adult,Female,Cis-Woman,White,No,Eligible,NA,NA,No,NA
+947819,Today@Brown,28,Adult,Male,Cis-Man,Multiple Races,No,Eligible,NA,NA,No,NA
+404784,Craigslist,40,Adult,Male,Cis-Man,White,No,Eligible,NA,NA,No,NA
+521306,Craigslist,50,Middle-aged,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+943797,Craigslist,53,Middle-aged,Female,Cis-Woman,White,Yes,Eligible,washout,NA,No,NA
+942363,Facebook,45,Middle-aged,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+195147,Craigslist,40,Adult,Male,Cis-Man,White,No,Eligible,washout,NA,No,NA
+534203,Referral from another study,23,Youth,Female,Cis-Woman,White,No,Ineligible,NA,NA,No,NA
+424842,Friend,26,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+242588,Friend,23,Youth,Female,Cis-Woman,Asian,No,Ineligible,NA,NA,No,NA
+274787,Friend,51,Middle-aged,Female,Cis-Man,White,No,Eligible,NA,NA,No,NA
+353135,Craigslist,47,Middle-aged,Female,Cis-Woman,American Indian or Alaska Native,No,Eligible,washout,NA,No,NA
+515661,Friend,34,Adult,Male,Cis-Man,White,Yes,Eligible,washout,NA,No,NA
+319743,Instagram,27,Adult,Female,Non-binary,Multiple Races,No,Eligible,washout,NA,No,NA
+373579,Craigslist,50,Middle-aged,Male,Cis-Man,Black or African American,No,Eligible,Eligible,Eligible,No,washout
+570988,Other,50,Middle-aged,Male,Prefer not to answer,Multiple Races,Unsure,Eligible,washout,NA,No,NA
+515500,Referral from another study,19,Youth,Female,Cis-Woman,White,No,Eligible,washout,NA,No,NA
+154903,Craigslist,67,Older-Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,No,NA
+250432,Friend,45,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,No,washout
