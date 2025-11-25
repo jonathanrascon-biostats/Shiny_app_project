@@ -34,7 +34,6 @@ ui <- page_sidebar(
     input_switch(id = "prop.chisq", label = "Chi-sq Proportions", value = FALSE),
     input_switch(id = "chisq", label = "Chi-square test", value = FALSE),
     input_switch(id = "fisher", label = "Fisher Exact", value = FALSE),
-    input_switch(id = "mcnemar", label = "McNemar test", value = FALSE),
     input_switch(id = "resid", label = "Residuals", value = FALSE),
     input_switch(id = "sresid", label = "Standardized Resids", value = FALSE),
     input_switch(id = "asresid", label = "Adjusted Standarized", value = FALSE)
@@ -59,7 +58,7 @@ server <- function(input, output, session) {
   }) 
 #output text that runs homogeneity or independence tests. Still need to add "switches" for true/false options in order to run different tests.
   output$contingency1 <- renderPrint({CrossTable(x = filter_data()[[input$status]], y = filter_data()[[input$factor]], expected = input$expected, prop.r = input$prop.r, 
-                                                 prop.c = input$prop.c, prop.t = input$prop.t, prop.chisq = input$prop.chisq, chisq = input$chisq, fisher = input$fisher, mcnemar = input$mcnemar, 
+                                                 prop.c = input$prop.c, prop.t = input$prop.t, prop.chisq = input$prop.chisq, chisq = input$chisq, fisher = input$fisher, 
                                                  resid = input$resid, sresid = input$sresid, asresid = input$asresid, format = "SPSS")})
 }
 
