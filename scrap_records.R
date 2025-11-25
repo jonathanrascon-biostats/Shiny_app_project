@@ -59,3 +59,4 @@ CT_plot_summary(cat_factor = sex, status = enrolled_result, title = "In-person O
 
 
 write_csv(CT_washout, "CT_washout.csv")
+?CrossTable

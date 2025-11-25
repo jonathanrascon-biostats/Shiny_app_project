@@ -25,13 +25,19 @@ ui <- page_sidebar(
                                                     "Recruitment Source" = "source"), multiple = FALSE, selected = "enrolled"),
     selectInput("factor", "Category", choices = c("Age Group" = "age_class", "Sex" = "sex","Race" = "race","Gender" = "gender", 
                                                   "Hispanic/Latinx" = "ethnicity"), multiple = FALSE, selected = "age_class"),
-#WORK IN PROGRESS:  added checkboxes in order to run each of the tests. They are not "reactive yet. 
-#Because each option in the CrossTable function needs a TRUE/FALSE input... I am not sure how to do this yet....
-  #NOT ACTIVATED YET!!
-    checkboxGroupInput(inputId = "chi_test", label = "Test Output", choiceNames = c("Expected Values", "Row Proportions", 
-                                                                                    "Column Proportions", "Total Proportions", 
-                                                                                    "Chi-sq Proportions", "Chi-square test", "Fisher Exact", "McNemar test"),
-                       choiceValues = rep(TRUE, 8))
+#Switches for TRUE/FALSE for each test:
+    
+    input_switch(id = "expected", label = "Expected Values", value = FALSE),
+    input_switch(id = "prop.r", label = "Row Proportions", value = FALSE),
+    input_switch(id = "prop.c", label = "Column Proportions", value = FALSE),
+    input_switch(id = "prop.t", label = "Total Proportions", value = FALSE),
+    input_switch(id = "prop.chisq", label = "Chi-sq Proportions", value = FALSE),
+    input_switch(id = "chisq", label = "Chi-square test", value = FALSE),
+    input_switch(id = "fisher", label = "Fisher Exact", value = FALSE),
+    input_switch(id = "mcnemar", label = "McNemar test", value = FALSE),
+    input_switch(id = "resid", label = "Residuals", value = FALSE),
+    input_switch(id = "sresid", label = "Standardized Resids", value = FALSE),
+    input_switch(id = "asresid", label = "Adjusted Standarized", value = FALSE)
   ),
   #navset_card_table allows us to switch between pages, and card adds the full screen option
   card(navset_card_tab(
@@ -41,7 +47,7 @@ ui <- page_sidebar(
 )
 server <- function(input, output, session) {
 #this reactive data frame removes NA values, and feeds into (1) summary data in the next step, and (2) into the contingency table.
-  filter_data <- reactive({CT_washout %>% drop_na(.data[[input$status]])}) 
+  filter_data <- reactive({CT_washout %>% drop_na(all_of(input$status))}) 
  #this reactive summarises the data into counts of the selected categories, and is called into the graph 
   data <- reactive({
     CT_summary <- filter_data() %>% 
@@ -52,9 +58,9 @@ server <- function(input, output, session) {
       geom_col(width = .5) + scale_y_continuous(n.breaks = 10) + facet_wrap(~.data[[input$factor]], scales = "free_y")
   }) 
 #output text that runs homogeneity or independence tests. Still need to add "switches" for true/false options in order to run different tests.
-  output$contingency1 <- renderPrint({CrossTable(x = filter_data()[[input$status]], y = filter_data()[[input$factor]], expected = TRUE, prop.r = FALSE, 
-                                                 prop.c = FALSE, prop.t = FALSE, prop.chisq = TRUE, chisq = TRUE, fisher = FALSE, mcnemar = FALSE, 
-                                                 resid = FALSE, sresid = FALSE, asresid = FALSE, format = "SPSS")})
+  output$contingency1 <- renderPrint({CrossTable(x = filter_data()[[input$status]], y = filter_data()[[input$factor]], expected = input$expected, prop.r = input$prop.r, 
+                                                 prop.c = input$prop.c, prop.t = input$prop.t, prop.chisq = input$prop.chisq, chisq = input$chisq, fisher = input$fisher, mcnemar = input$mcnemar, 
+                                                 resid = input$resid, sresid = input$sresid, asresid = input$asresid, format = "SPSS")})
 }
 
 shinyApp(ui, server)
