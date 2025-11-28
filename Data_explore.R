@@ -58,7 +58,7 @@ ui <- page_sidebar(
                             p("App Usage: Choose an enrollment stage (up to Total Enrollment), a Category (e.g. Age Group), and any tests to perform. Click 'Generate' to perform
                                the test(s). The term 'washout' refers to: Lost to follow up, Ineligible, Not Interested(withdrew). The majority of these were Lost.")),
     nav_panel("Plots", plotOutput("plot1")),
-    nav_panel("Contingency Table", verbatimTextOutput("contingency1"))
+    nav_panel("Contingency Table", verbatimTextOutput("contingency1"), p("Click generate to run tests"))
   )
 )
 server <- function(input, output, session) {
