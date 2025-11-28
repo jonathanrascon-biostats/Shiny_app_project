@@ -51,7 +51,7 @@ ui <- page_sidebar(
                                exposure to messages about the effects of cannabis, yet little is known about the source of messaging, how it is transmitted to users, 
                                how it shapes their thinking, and ultimately its association with CU patterns. This study will gather critical information about
                                message sources, cannabis-promoting content, and risk warnings being disseminated to cannabis users as well as the messages being received, 
-                               their effects on CU motives, and subsequent CU. This app is meant to track recruitment efforts of the study; of the 450 people initially eligible, only about 30% made it to enrollment. 
+                               their effects on CU motives, and subsequent CU. This app is meant to track recruitment efforts of the study.
                                There are many burdens-to-entry in the study: Online screening, Phone screening, Zoom Visit, In-person Visit. Of the 450 people initially eligible, only about 30% made it to enrollment.
                                This app tracks the point at which a participant washes out, i.e. the point at which they no longer progressed in the study, and those who are fully enrolled."),
                             p("App Usage: Choose an enrollment stage (up to Total Enrollment), a Category (e.g. Age Group), and any tests to perform.The term 'washout' refers to: Lost to follow up, Ineligible, Not Interested(withdrew).
