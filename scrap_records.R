@@ -60,7 +60,9 @@ CT_plot_summary(cat_factor = sex, status = enrolled_result, title = "In-person O
 
 #remove duplicate entries (i.e. duplicate screen ids)
 CT_washout <- CT_washout %>% distinct(screen_id, .keep_all = TRUE)
-write_csv(CT_washout, "CT_washout.csv")
+
+#Commented out 'write_csv' to avoid overwrting....
+#write_csv(CT_washout, "CT_washout.csv")
 
 
 
