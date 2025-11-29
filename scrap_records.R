@@ -29,8 +29,8 @@ CT_washout <- CT_data %>% mutate(phone_result = case_when(phone_result == "Ineli
                                      zoom_result == "washout" ~ NA_character_,
                                      enrolled == "Yes" ~ "Eligible",
                                      enrolled == "No" ~ "washout",
-                                     TRUE ~enrolled))
-
+                                     TRUE ~enrolled)) %>% 
+  relocate(enrolled, .after = last_col())
 ###############################################################################
 #################JR updated plot code#########################################
 ###############################################################################
@@ -60,4 +60,7 @@ CT_plot_summary(cat_factor = sex, status = enrolled_result, title = "In-person O
 
 
 write_csv(CT_washout, "CT_washout.csv")
-?CrossTable
+
+my.table <-CrossTable(x = CT_washout$screen_result, CT_washout$age_class)
+my.matrix <- as.data.frame.matrix(my.table$t)
+my.matrix
