@@ -26,6 +26,7 @@ CT_washout <- CT_data %>% mutate(phone_result = case_when(phone_result == "Ineli
                                  zoom_result == "Not interested" ~ "washout",
                                  TRUE ~ zoom_result)) %>% 
   mutate(enrolled_result = case_when(is.na(zoom_result) ~ NA_character_,
+                                     zoom_result == "washout" ~ NA_character_,
                                      enrolled == "Yes" ~ "Eligible",
                                      enrolled == "No" ~ "washout",
                                      TRUE ~enrolled))

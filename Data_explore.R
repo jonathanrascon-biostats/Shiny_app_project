@@ -58,10 +58,13 @@ ui <- page_sidebar(
                             p("App Usage: Choose an enrollment stage (up to Total Enrollment), a Category (e.g. Age Group), and any tests to perform. Click 'Generate' to perform
                                the test(s). The term 'washout' refers to: Lost to follow up, Ineligible, Not Interested(withdrew). The majority of these were Lost.")),
     nav_panel("Plots", plotOutput("plot1")),
-    nav_panel("Contingency Table", verbatimTextOutput("contingency1"), p("Click generate to run tests"))
+    nav_panel("Contingency Table", verbatimTextOutput("contingency1"), p("Click generate to run tests")),
+    nav_panel("Raw Data", tableOutput("raw_data"))
   )
 )
 server <- function(input, output, session) {
+  
+  output$raw_data <- renderTable(CT_washout)
 #this reactive data frame removes NA values, and feeds into (1) summary data (CT_data) in the next step, and (2) into the contingency table (CT_table).
   filter_data <- reactive({CT_washout %>% drop_na(all_of(input$status))}) 
  #this reactive summarises the data into counts of the selected categories, and is called into the graph 
