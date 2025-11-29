@@ -58,9 +58,9 @@ CT_plot_summary(cat_factor = sex, status = phone_result, title = "Phone Screenin
 CT_plot_summary(cat_factor = sex, status = zoom_result, title = "Zoom Screening Result")
 CT_plot_summary(cat_factor = sex, status = enrolled_result, title = "In-person Outcome")
 
-
+#remove duplicate entries (i.e. duplicate screen ids)
+CT_washout <- CT_washout %>% distinct(screen_id, .keep_all = TRUE)
 write_csv(CT_washout, "CT_washout.csv")
 
-my.table <-CrossTable(x = CT_washout$screen_result, CT_washout$age_class)
-my.matrix <- as.data.frame.matrix(my.table$t)
-my.matrix
+
+

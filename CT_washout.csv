@@ -48,9 +48,6 @@ screen_id,source,age,age_class,sex,gender,race,ethnicity,screen_result,phone_res
 556462,Today@Brown,23,Youth,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Eligible,Yes
 958286,Referral from another study,22,Youth,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Eligible,Yes
 201168,Flyer/Poster,24,Youth,Female,Cis-Woman,Asian,No,Eligible,Eligible,Eligible,Eligible,Yes
-201168,Flyer/Poster,24,Youth,Female,Cis-Woman,Asian,No,Eligible,washout,NA,NA,No
-201168,Flyer/Poster,24,Youth,Female,Cis-Woman,Asian,No,Eligible,washout,NA,NA,No
-201168,Flyer/Poster,24,Youth,Female,Cis-Woman,Asian,No,Eligible,washout,NA,NA,No
 209700,Referral from another study,40,Adult,Female,Cis-Woman,Multiple Races,No,Eligible,Eligible,Eligible,washout,No
 193875,internet,45,Middle-aged,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,washout,No
 213341,Referral from another study,26,Adult,Male,Cis-Man,White,No,Eligible,Eligible,Eligible,Eligible,Yes
@@ -123,7 +120,6 @@ screen_id,source,age,age_class,sex,gender,race,ethnicity,screen_result,phone_res
 386251,Craigslist,63,Older-Adult,Female,Cis-Woman,Black or African American,No,Eligible,Eligible,Eligible,Eligible,Yes
 899240,internet,21,Youth,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Eligible,Yes
 860828,internet,33,Adult,Female,Cis-Woman,Multiple Races,Unsure,Eligible,Eligible,Eligible,Eligible,Yes
-860828,internet,33,Adult,Female,Cis-Woman,Multiple Races,Unsure,Eligible,washout,NA,NA,No
 832452,Multiple,37,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,Eligible,Eligible,Yes
 324395,Flyer/Poster,23,Youth,Male,Cis-Man,White,Yes,Eligible,Eligible,Eligible,Eligible,Yes
 570141,Referral from another study,31,Adult,Female,Cis-Woman,Unsure,Yes,Eligible,Eligible,Eligible,Eligible,Yes
@@ -239,7 +235,6 @@ screen_id,source,age,age_class,sex,gender,race,ethnicity,screen_result,phone_res
 810026,Today@Brown,24,Youth,Male,Cis-Man,White,No,Eligible,washout,NA,NA,No
 651326,Flyer/Poster,27,Adult,Female,Cis-Woman,Black or African American,No,Eligible,washout,NA,NA,No
 763340,Multiple,24,Youth,Female,Cis-Woman,White,No,Eligible,washout,NA,NA,No
-763340,Multiple,24,Youth,Female,Cis-Woman,White,No,Eligible,washout,NA,NA,No
 245807,Today@Brown,21,Youth,Female,Cis-Woman,White,No,Eligible,washout,NA,NA,No
 238316,Referral from another study,35,Adult,Male,Cis-Man,White,No,Eligible,washout,NA,NA,No
 430015,Flyer/Poster,26,Adult,Female,Cis-Woman,Multiple Races,No,Eligible,NA,NA,NA,No
@@ -252,26 +247,16 @@ screen_id,source,age,age_class,sex,gender,race,ethnicity,screen_result,phone_res
 374409,Flyer/Poster,27,Adult,Female,Multiple Identities,Unsure,Yes,Eligible,washout,NA,NA,No
 608068,Facebook,65,Older-Adult,Female,Cis-Woman,White,No,Ineligible,NA,NA,NA,No
 301279,Friend,28,Adult,Female,Cis-Man,White,No,Eligible,Eligible,washout,NA,No
-301279,Friend,28,Adult,Female,Cis-Man,White,No,Eligible,washout,NA,NA,No
-301279,Friend,28,Adult,Female,Cis-Man,White,No,Eligible,washout,NA,NA,No
 340814,Facebook,36,Adult,Male,Cis-Man,Multiple Races,No,Eligible,washout,NA,NA,No
 913439,Referral from another study,24,Youth,Female,Cis-Woman,Unsure,Yes,Eligible,washout,NA,NA,No
-403426,Referral from another study,27,Adult,Male,Multiple Identities,White,No,Eligible,washout,NA,NA,No
-403426,Referral from another study,27,Adult,Male,Multiple Identities,White,No,Eligible,washout,NA,NA,No
 403426,Referral from another study,27,Adult,Male,Multiple Identities,White,No,Eligible,washout,NA,NA,No
 591893,Flyer/Poster,23,Youth,Female,Cis-Woman,White,No,Eligible,washout,NA,NA,No
 885899,Instagram,20,Youth,Male,Cis-Man,White,No,Eligible,washout,NA,NA,No
 411034,Flyer/Poster,28,Adult,Male,Multiple Identities,White,Unsure,Eligible,washout,NA,NA,No
-411034,Flyer/Poster,28,Adult,Male,Multiple Identities,White,Unsure,Eligible,washout,NA,NA,No
 296284,email listserv,22,Youth,Female,Cis-Woman,Asian,No,Eligible,washout,NA,NA,No
 889835,Friend,34,Adult,Male,Cis-Man,White,No,Eligible,washout,NA,NA,No
 689795,Flyer/Poster,24,Youth,Male,Cis-Man,Unsure,Yes,Eligible,washout,NA,NA,No
-689795,Flyer/Poster,24,Youth,Male,Cis-Man,Unsure,Yes,Eligible,washout,NA,NA,No
-689795,Flyer/Poster,24,Youth,Male,Cis-Man,Unsure,Yes,Eligible,washout,NA,NA,No
-689795,Flyer/Poster,24,Youth,Male,Cis-Man,Unsure,Yes,Eligible,washout,NA,NA,No
-689795,Flyer/Poster,24,Youth,Male,Cis-Man,Unsure,Yes,Eligible,washout,NA,NA,No
 347904,Other,36,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,NA,No
-975162,email listserv,23,Youth,Male,Cis-Man,White,No,Eligible,washout,NA,NA,No
 975162,email listserv,23,Youth,Male,Cis-Man,White,No,Eligible,washout,NA,NA,No
 207293,Other,42,Adult,Male,Cis-Man,White,Yes,Eligible,NA,NA,NA,No
 868288,internet,30,Adult,Female,Cis-Woman,Black or African American,No,Ineligible,NA,NA,NA,No
@@ -307,7 +292,6 @@ screen_id,source,age,age_class,sex,gender,race,ethnicity,screen_result,phone_res
 843754,Craigslist,33,Adult,Male,Cis-Man,Black or African American,No,Eligible,washout,NA,NA,No
 179256,Facebook,36,Adult,Female,Non-binary,Black or African American,No,Eligible,washout,NA,NA,No
 281435,Craigslist,38,Adult,Female,Cis-Woman,White,No,Eligible,Eligible,washout,NA,No
-281435,Craigslist,38,Adult,Female,Cis-Woman,White,No,Eligible,washout,NA,NA,No
 134720,Craigslist,44,Adult,Male,Cis-Man,Multiple Races,No,Eligible,washout,NA,NA,No
 689629,Flyer/Poster,45,Middle-aged,Female,Cis-Woman,White,No,Ineligible,NA,NA,NA,No
 108062,Craigslist,40,Adult,Male,Cis-Man,White,No,Ineligible,NA,NA,NA,No
@@ -516,7 +500,6 @@ screen_id,source,age,age_class,sex,gender,race,ethnicity,screen_result,phone_res
 212009,internet,35,Adult,Female,Cis-Woman,Multiple Races,Unsure,Ineligible,NA,NA,NA,No
 523544,Referral from another study,21,Youth,Male,Cis-Man,Unsure,Yes,Eligible,washout,NA,NA,No
 969948,Craigslist,54,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,washout,NA,No
-969948,Craigslist,54,Middle-aged,Male,Cis-Man,White,No,Eligible,washout,NA,NA,No
 698365,Referral from another study,29,Adult,Male,Non-binary,White,No,Eligible,NA,NA,NA,No
 827082,Referral from another study,21,Youth,Female,Cis-Woman,Asian,No,Ineligible,NA,NA,NA,No
 614900,Craigslist,51,Middle-aged,Male,Cis-Man,White,No,Eligible,Eligible,washout,NA,No
