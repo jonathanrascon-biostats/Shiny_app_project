@@ -58,7 +58,7 @@ ui <- page_sidebar(
                             p("App Usage: Choose an enrollment stage (up to Total Enrollment), a Category (e.g. Age Group), and any tests to perform. Click 'Generate' to perform
                                the test(s). The term 'washout' refers to: Lost to follow up, Ineligible, Not Interested(withdrew). The majority of these were Lost.")),
     nav_panel("Plots", plotOutput("plot1")),
-    nav_panel("Contingency Table", verbatimTextOutput("contingency1"), h5("Click 'generate' to run tests")),
+    nav_panel("Contingency Table", textOutput("CT_title"), verbatimTextOutput("contingency1"), h5("Click 'generate' to run tests")),
     nav_panel("Raw Data", dataTableOutput("raw_data"))
   )
 )
@@ -76,6 +76,10 @@ server <- function(input, output, session) {
   CT_table <- eventReactive(input$action, {CrossTable(x = filter_data()[[input$status]], y = filter_data()[[input$factor]], expected = input$expected, prop.r = input$prop.r, 
                                                    prop.c = input$prop.c, prop.t = input$prop.t, prop.chisq = input$prop.chisq, chisq = input$chisq, fisher = input$fisher, 
                                                    resid = input$resid, sresid = input$sresid, asresid = input$asresid, format = "SPSS", dnn = c("Status", "Factor"))})
+  
+  CT_title_text <- eventReactive(input$action, {
+    paste("Cross-Tabulation of ", input$status, " and ", input$factor, sep = "")
+  })
 #simple faceted plot that displays the various categories. Some aspects such as the legend or labels on the x-axis need to be cleaned up
   output$plot1 <- renderPlot({
     ggplot(CT_data(), aes(x = .data[[input$status]], y = count, fill = .data[[input$factor]]))+
@@ -83,6 +87,7 @@ server <- function(input, output, session) {
   }) 
 #output text that runs homogeneity or independence tests. Would like to add Text to the blank start screen, e.g. 'Need to select tests"
   output$contingency1 <- renderPrint({CT_table()})
+  output$CT_title <-renderText({CT_title_text()})
 }
 
 shinyApp(ui, server)
