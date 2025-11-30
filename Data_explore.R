@@ -11,6 +11,9 @@ library(ggplot2)
 library(tidyr)
 library(stringr)
 library(forcats)
+library(janitor)
+library(knitr)
+library(kableExtra)
 CT_washout <- read_csv("CT_washout.csv")
 CT_washout$age_class <- factor(CT_washout$age_class, levels = c("Youth", "Adult", "Middle-aged", "Older-Adult"), ordered = TRUE)
 CT_washout <- CT_washout %>% mutate(across(c("sex", "gender", "race", "ethnicity"), as.factor), screen_id = as.character(screen_id))
@@ -52,8 +55,8 @@ ui <- page_sidebar(
                             p("App Usage: Choose an enrollment stage (up to Total Enrollment), a Category (e.g. Age Group), and any tests to perform. Click 'Generate' to perform
                                the test(s). The term 'washout' refers to: Lost to follow up, Ineligible, Not Interested(withdrew). The majority of these were Lost.")),
     nav_panel("Plots", plotOutput("washout_plot")),
-    nav_panel("Contingency Table", textOutput("CT_title"), verbatimTextOutput("contingency1"), h5("Click 'generate' to run tests")),
-    nav_panel("Raw Data", dataTableOutput("raw_data"))
+    nav_panel("Contingency Table", textOutput("CT_title"), uiOutput("contingency1")),
+        nav_panel("Raw Data", dataTableOutput("raw_data"))
   )
 )
 
@@ -103,10 +106,8 @@ server <- function(input, output, session) {
         input_switch(id = "prop.t", label = "Total Proportions", value = FALSE),
         input_switch(id = "prop.chisq", label = "Chi-sq Proportions", value = FALSE),
         input_switch(id = "chisq", label = "Chi-square test", value = FALSE),
-        input_switch(id = "fisher", label = "Fisher Exact", value = FALSE),
-        input_switch(id = "resid", label = "Residuals", value = FALSE),
-        input_switch(id = "sresid", label = "Standardized Resids", value = FALSE),
-        input_switch(id = "asresid", label = "Adjusted Standarized", value = FALSE)
+        input_switch(id = "fisher", label = "Fisher Exact", value = FALSE)
+   
       )
       
 #LAS: Here is the sidebar when in the plots tab. 
@@ -216,13 +217,73 @@ server <- function(input, output, session) {
       group_by(.data[[input$status]], .data[[input$factor]]) %>% summarise(count = n(), .groups = "drop")
   })
 #JR: this object is linked to the contingency table (contingency1), and is linked to the action button using eventReactive.
-  CT_table <- reactive({CrossTable(x = filter_data()[[input$status]], y = filter_data()[[input$factor]], expected = input$expected, prop.r = input$prop.r, 
-                                                   prop.c = input$prop.c, prop.t = input$prop.t, prop.chisq = input$prop.chisq, chisq = input$chisq, fisher = input$fisher, 
-                                                   resid = input$resid, sresid = input$sresid, asresid = input$asresid, format = "SPSS", dnn = c("Status", "Factor"))})
+#LAS: I updated this so that it looks more like a table in a word doc instead
+  #of like an old computer
+  
+  CT_table <- reactive({
+    req(input$status, input$factor)
+    
+    # Base counts table
+    tab <- filter_data() %>%
+      tabyl(.data[[input$status]], .data[[input$factor]])
+    
+    
+    # Save counts only for tests
+    counts_matrix <- as.matrix(tab[, -1])
+    
+    # Add percentages if switches are on
+    if (input$prop.r) tab <- tab %>% adorn_percentages("row") %>% adorn_pct_formatting()
+    if (input$prop.c) tab <- tab %>% adorn_percentages("col") %>% adorn_pct_formatting()
+    if (input$prop.t) tab <- tab %>% adorn_percentages("all") %>% adorn_pct_formatting()
+    
+    # Add totals for display
+    tab <- tab %>% adorn_totals(where = "row") %>% adorn_totals(where = "col")
+    
+    # Chi-square test
+    if (input$chisq) {
+      chi <- tryCatch(chisq.test(counts_matrix), error = function(e) NULL)
+      if(!is.null(chi)) {
+        tab$ChiSq_P <- round(chi$p.value, 4)
+        if (input$resid) tab$Residuals <- apply(chi$residuals, 1, function(x) paste(round(x, 2), collapse = ", "))
+        if (input$sresid) tab$Std_Residuals <- apply(chi$stdres, 1, function(x) paste(round(x, 2), collapse = ", "))
+        if (input$asresid) tab$Adj_Std_Residuals <- apply(chi$stdres / sqrt(1 - chi$expected/sum(chi$expected)), 1,
+                                                          function(x) paste(round(x, 2), collapse = ", "))
+      }
+    }
+    
+    # Fisher exact test
+    if (input$fisher) {
+      fisher_test <- tryCatch(fisher.test(counts_matrix), error = function(e) NULL)
+      if(!is.null(fisher_test)) tab$Fisher_P <- round(fisher_test$p.value, 4)
+    }
+    
+    # Chi-sq proportions (row * col * total) if selected
+    if (input$prop.chisq) {
+      prop_chisq <- counts_matrix / sum(counts_matrix)
+      tab$ChiSq_Prop <- apply(prop_chisq, 1, function(x) paste(round(x, 3), collapse = ", "))
+    }
+    
+    return(tab)
+  })
+  
+  # Render the table dynamically
+  output$contingency1 <- renderUI({
+    req(CT_table())
+    
+    HTML(
+      CT_table() %>%
+        kable(format = "html", table.attr = "style='width:100%;'", 
+              caption = paste("Contingency Table of", input$status, "and", input$factor)) %>%
+        kable_styling(full_width = TRUE, bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+    )
+  })
+  
   
   CT_title_text <- reactive({
     paste("Cross-Tabulation of ", input$status, " and ", input$factor, sep = "")
   })
+  
+  output$CT_title <- renderText({CT_title_text()})
   
   
 #JR: simple faceted plot that displays the various categories. Some aspects such as the legend or labels on the x-axis need to be cleaned up
@@ -311,7 +372,6 @@ server <- function(input, output, session) {
 })
   
 #JR: output text that runs homogeneity or independence tests. Would like to add Text to the blank start screen, e.g. 'Need to select tests"
-  output$contingency1 <- renderPrint({CT_table()})
   output$CT_title <-renderText({CT_title_text()})
 }
 
