@@ -94,6 +94,7 @@ server <- function(input, output, session) {
           "Online Screener" = "screen_result",
           "Phone Screening" = "phone_result",
           "Zoom Visit" = "zoom_result",
+          "In-Person Visit" = "enrolled_result",
                     "Recruitment Source" = "source"
         ), multiple = FALSE, selected = "enrolled"),
         
@@ -208,18 +209,25 @@ server <- function(input, output, session) {
   })
   
 
-  
-  
   #this object is linked to the contingency table (contingency1), and is linked to the action button using eventReactive.
   CT_table <- reactive ({
     req(input$status, input$factor)   # ensure inputs exist
     df <- filter_ct()
-    CrossTable(x = df()[[input$status]], y = df()[[input$factor]], expected = input$expected, prop.r = input$prop.r, 
-               prop.c = input$prop.c, prop.t = input$prop.t, prop.chisq = input$prop.chisq, chisq = input$chisq, fisher = input$fisher, 
-               format = "SPSS", dnn = c("Status", "Factor"))})
+    CrossTable(x = df[[input$status]], y = df[[input$factor]], expected = input$expected, prop.r = input$prop.r, 
+               prop.c = input$prop.c, prop.t = input$prop.t, prop.chisq = input$prop.chisq, chisq = input$chisq, fisher = input$fisher,
+               format = "SAS", dnn = c("Status", "Factor"))})
   
   CT_title_text <- reactive ({
-    paste("Cross-Tabulation of ", input$status, " and ", input$factor, sep = "")
+    factor_labels <- list("age_class" = "Age Group", "sex" = "Sex", "race" = "Race",
+                         "gender" = "Gender", "ethnicity" = "Ethnicity")
+    status_labels <- list( "enrolled" = "Total Enrollment",
+                           "screen_result" = "Online Screener",
+                           "phone_result" = "Phone Screening",
+                           "zoom_result" = "Zoom Visit",
+                           "source" = "Recruitment Source")
+    f_label <- factor_labels[input$factor]
+    s_label <- status_labels[input$status]
+    paste("Cross-Tabulation of ", f_label, " and ", s_label, sep = "")
   })
   
   #output text that runs homogeneity or independence tests. Would like to add Text to the blank start screen, e.g. 'Need to select tests"

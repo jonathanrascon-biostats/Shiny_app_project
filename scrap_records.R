@@ -64,5 +64,3 @@ CT_washout <- CT_washout %>% distinct(screen_id, .keep_all = TRUE)
 #Commented out 'write_csv' to avoid overwrting....
 #write_csv(CT_washout, "CT_washout.csv")
 
-
-
