@@ -1,245 +1,381 @@
 ###############################################################################
 #################################JR Data Import and Wrangling##################
 ################################################################################
-library(tidyverse)
-library(reshape2)
-library(gmodels)
 library(shiny)
-
-#Primary data: cleaned and wrangled from multiple sources. After cleaning, I downloaded
-#and re-uploaded into this new project.
-CT_data <- read_csv("CT_recruit_data.csv")
-table(CT_data$age_class)
-summary(CT_data)
-
-#Assigned all columns to an appropriate data type.
-CT_data$age_class <- factor(CT_data$age_class, levels = c("Youth", "Adult", "Middle-aged", "Older-Adult"), ordered = TRUE)
-CT_data <- CT_data %>% mutate(across(c("sex", "gender", "race", "ethnicity"), as.factor))
-CT_data$age <- as.numeric(CT_data$age)
-CT_data$screen_id <- as.character(CT_data$screen_id)
-
-#Here for all screening types (phone, zoom, etc.) I generalized all participants who were either
-#Lost, Not interested, etc. as "washout", i.e. to quantify, in general, the point at which a 
-#participant did not progress further in the study.
-CT_washout <- CT_data %>% mutate(phone_result = case_when(phone_result == "Ineligible" ~ "washout",
-                                                          phone_result == "Lost" ~ "washout",
-                                                          phone_result == "Not interested" ~ "washout",
-                                                          TRUE ~ phone_result)) %>% 
-  mutate(zoom_result = case_when(zoom_result == "Lost" ~ "washout",
-                                 zoom_result == "Not interested" ~ "washout",
-                                 TRUE ~ zoom_result)) %>% 
-  mutate(enrolled_result = case_when(is.na(zoom_result) ~ NA_character_,
-                              enrolled == "Yes" ~ "Eligible",
-                              enrolled == "No" ~ "washout",
-                              TRUE ~enrolled))
+library(bslib)
+library(tidyverse)
+library(gmodels)
+library(DT)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(stringr)
+library(forcats)
+library(janitor)
+library(knitr)
+library(kableExtra)
+CT_washout <- read_csv("CT_washout.csv")
+CT_washout$age_class <- factor(CT_washout$age_class, levels = c("Youth", "Adult", "Middle-aged", "Older-Adult"), ordered = TRUE)
+CT_washout <- CT_washout %>% mutate(across(c("sex", "gender", "race", "ethnicity"), as.factor), screen_id = as.character(screen_id))
 
 ###############################################################################
-######################LAS UI Creation##########################################
-##############################################################################
+#################################JR & LAS: UI##################################
+################################################################################
 
-#First I will make the user interface.
-#UI
-ui <- fluidPage(
-#I will add a title panel that describes what we are looking at with this app
-titlePanel("Project CannTalk Participant Enrollment & Washout"),
-#I will add a side bar so that users can filter data based on participant groups  
-  sidebarLayout(
-    sidebarPanel(
-#I want the sidebar to be located on the left side of the screen and take up
-#about 25% of the total screen
-      width = 3,
-#I will add each variable the user could potentially filter by here.
-
-      selectInput(
-        "age_class", "Age Group",
-        choices = c("Older-Adult", "Middle-aged", "Adult","Youth"),
-        #I have given the option to select multiple groups within each category
-        multiple = TRUE
-      ),
-      
-      selectInput(
-        "sex", "Sex",
-        choices = c("Male", "Female"),
-        multiple = TRUE
-      ),
-      
-      selectInput(
-        "gender", "Gender",
-        choices = c("Cis-Woman",
-                    "Cis-Man",
-                    "Prefer not to answer",
-                    "Multiple Identities",
-                    "Non-binary",
-                    "Genderqueer/gender non-conforming",
-                    "Transgender Woman/Trans Woman",
-                    "Transgender Man/Trans Man"),
-        multiple = TRUE
-      ),
-      
-      selectInput(
-        "race", "Race",
-        choices = c("All", "White",
-                    "Asian",
-                    "Black or African American",
-                    "Multiple Races",
-                    "Unsure",
-                    "American Indian or Alaska Native"),
-        multiple = TRUE
-      ),
-      
-      
-      selectInput(
-        "ethnicity", "Hispanic/Latinx:",
-        choices = c("No", "Yes", "Unsure"),
-        multiple = TRUE
-      ),
-      
-    ),
+#JR: using page_sidebar for now, but there may be a better page format.....
+ui <- page_sidebar(
+  title = h2("CannTalk Recruitment"),
+  
+#LAS: making sidebar so that it changes based on what tab we are in. Without
+#This it looks confusing as we are checking off things like show a chi-square
+#or show the expected amount while the main page is a description or a plot. 
+  sidebar = sidebar(
     
-#Now for our plots. We want the user to see 6 different plots that
-#are arranged in two rows of 3 to the right of the category selection input pane
-#I want the plots to take up about 75% of the screen
+    uiOutput("dynamic_sidebar")
+  ),
     
-    mainPanel(
-      width = 9,
-      
-      fluidRow(
-        column(4, plotOutput("plot1")),
-        column(4, plotOutput("plot2")),
-        column(4, plotOutput("plot3"))
-      ),
-      
-      
-      
-      fluidRow(
-        column(4, plotOutput("plot4")),
-        column(4, plotOutput("plot5")),
-        column(4, plotOutput("plot6"))
-      )
-    )
+    
+  #JR: navset_card_table allows us to switch between pages
+  navset_card_tab(
+    #LAS: Need this for the dynamic tabs
+    id = "tabs",
+    #JR:
+    nav_panel("Description", p("Project CannTalk is a longitudinal observational study tracking habitual cannabis users over the course of approximately 9 months. 
+                               With the majority of US states having adopted legislation to medically and/or recreationally legalize cannabis, public perception of 
+                               the drug is now overwhelmingly favorable. Increased access and prevalence of use are accompanied by perceptions of low health risk 
+                               and/or of therapeutic benefits associated with cannabis use. Aside from evidence for symptom relief in certain medical conditions, 
+                               evidence regarding therapeutic effects of cannabis for many conditions remains elusive, leaving the decision regarding when and how 
+                               to use cannabis to the user. Both therapeutic and recreational reasons (motives) for CU (cannabis use) are largely shaped through 
+                               exposure to messages about the effects of cannabis, yet little is known about the source of messaging, how it is transmitted to users, 
+                               how it shapes their thinking, and ultimately its association with CU patterns. This study will gather critical information about
+                               message sources, cannabis-promoting content, and risk warnings being disseminated to cannabis users as well as the messages being received, 
+                               their effects on CU motives, and subsequent CU. This app is meant to track recruitment efforts of the study.
+                               There are many burdens-to-entry in the study: Online screening, Phone screening, Zoom Visit, In-person Visit. Of the 450 people initially eligible, only about 30% made it to enrollment.
+                               This app tracks the point at which a participant washes out, i.e. the point at which they no longer progressed in the study, and those who are fully enrolled."),
+                            p("App Usage: Choose an enrollment stage (up to Total Enrollment), a Category (e.g. Age Group), and any tests to perform. Click 'Generate' to perform
+                               the test(s). The term 'washout' refers to: Lost to follow up, Ineligible, Not Interested(withdrew). The majority of these were Lost.")),
+    nav_panel("Plots", plotOutput("washout_plot")),
+    nav_panel("Contingency Table", textOutput("CT_title"), uiOutput("contingency1")),
+        nav_panel("Raw Data", dataTableOutput("raw_data"))
   )
 )
 
 ###############################################################################
-######################LAS Server###############################################
+######################LAS & JR: Server#########################################
 ###############################################################################
 
-#Now I will make the server
 server <- function(input, output, session) {
   
-#The server has two real funcions. The first is to apply filters and the second
-#is to generate plots based on these filters.
-#Here is we will filter data based on user inputs
-  filteredData <- reactive({
+#LAS: Here I have changed it so that the sidebar options change based on which
+#tab you are in. I think this makes the flow of what the app can do and where
+#it does it more clear.
+  
+  output$dynamic_sidebar <- renderUI({
+    req(input$tabs)
+
+#LAS: Here is the sidebar when in the contingency table tab   
+    
+    if (input$tabs == "Contingency Table") {
+      
+#LAS: JR wrote original side bar for contingency table which I slightly edited
+#here:
+      tagList(
+        #JR: Inputs are enrollment status and a categorical factor.
+        selectInput("status", "Enrollment", choices = c(
+          "Total Enrollment" = "enrolled",
+          "Online Screener" = "screen_result",
+          "Phone Screening" = "phone_result",
+          "Zoom Visit" = "zoom_result",
+          "In-Person Visit" = "enrolled_result",
+          "Recruitment Source" = "source"
+        ), multiple = FALSE, selected = "enrolled"),
+        
+        selectInput("factor", "Category", choices = c(
+          "Age Group" = "age_class", "Sex" = "sex", "Race" = "race",
+          "Gender" = "gender", "Hispanic/Latinx" = "ethnicity"
+        ), multiple = FALSE, selected = "age_class"),
+        
+        #JR: actionButton is linked to the contingency table; click to generate test results   
+        #LAS: I'm getting rid of this so that it can update automatically
+        #actionButton("action", "Generate"),
+        
+        #Switches for TRUE/FALSE for each test on the contingency table:
+        input_switch(id = "expected", label = "Expected Values", value = FALSE),
+        input_switch(id = "prop.r", label = "Row Proportions", value = FALSE),
+        input_switch(id = "prop.c", label = "Column Proportions", value = FALSE),
+        input_switch(id = "prop.t", label = "Total Proportions", value = FALSE),
+        input_switch(id = "prop.chisq", label = "Chi-sq Proportions", value = FALSE),
+        input_switch(id = "chisq", label = "Chi-square test", value = FALSE),
+        input_switch(id = "fisher", label = "Fisher Exact", value = FALSE)
+   
+      )
+      
+#LAS: Here is the sidebar when in the plots tab. 
+      
+    } else if (input$tabs == "Plots") {
+  
+ 
+      tagList(
+        h4("Filters"),
+        
+        #LAS: this makes it so that you can filter through which ever groups
+        #you want the plot to include.
+        
+        selectInput("age_class", "Age Group",
+                    choices = c("Older-Adult","Middle-aged","Adult","Youth"),
+                    #LAS:This makes it so that you can select multiple groups from
+                    #each category
+                    multiple = TRUE
+        ),
+        
+        selectInput("sex", "Sex",
+                    choices = c("Male","Female"),
+                    multiple = TRUE
+        ),
+        
+        selectInput("gender", "Gender",
+                    choices = c("Cis-Woman","Cis-Man","Prefer not to answer",
+                                "Multiple Identities","Non-binary",
+                                "Genderqueer/gender non-conforming",
+                                "Transgender Woman/Trans Woman",
+                                "Transgender Man/Trans Man"),
+                    multiple = TRUE
+        ),
+        
+        selectInput("race", "Race",
+                    choices = c("All","White","Asian","Black or African American",
+                                "Multiple Races","Unsure",
+                                "American Indian or Alaska Native"),
+                    multiple = TRUE
+        ),
+        
+        selectInput("ethnicity", "Hispanic/Latinx:",
+                    choices = c("No","Yes","Unsure"),
+                    multiple = TRUE
+        )
+      )
+      
+#LAS: Here is the sidebar when in the description tab. We don't really need a sidebar
+#here so it is just blank
+      
+    } else if (input$tabs == "Description") {
+      
+      ### >>>> EMPTY SIDEBAR FOR DESCRIPTION
+      tagList(
+        h4("Description Sidebar (template)"),  ### >>>> new
+        p("No inputs for this tab.")
+      )
+      
+#LAS: Here is the sidebar when in the raw data tab. 
+      
+    } else if (input$tabs == "Raw Data") {
+      
+      ### >>>> TEMPLATE SIDEBAR FOR RAW DATA
+      tagList(
+        h4("Raw Data Filters (template)"),     ### >>>> new
+        p("Add raw data filters here if needed.")  ### >>>> new
+      )
+      
+    }
+  }) 
+  
+  
+  output$raw_data <- renderDataTable(CT_washout, rownames = FALSE)
+#JR:this reactive data frame removes NA values, and feeds into (1) summary data (CT_data) in the next step, and (2) into the contingency table (CT_table).
+  filter_data <- reactive({
+#LAS: Plugging this in so that the plots update based on the selected filters
+    
     data <- CT_washout
-#We will use "if" so that at baseline if nothing is selected by 
-#the user plots will show data from all categories
-
-if (!is.null(input$age_class) && length(input$age_class) < 
-    length(unique(CT_washout$AgeGroup))) {
-    data <- subset(data, AgeGroup %in% input$age_class)
-}
     
-if (!is.null(input$sex) && length(input$sex) < 
-        length(unique(CT_washout$Sex))) {
-      data <- subset(data, Sex %in% input$Sex)
+    if (!is.null(input$age_class) && length(input$age_class) > 0) {
+      data <- subset(data, age_class %in% input$age_class)
+    }
+    
+    if (!is.null(input$sex) && length(input$sex) > 0) {
+      data <- subset(data, sex %in% input$sex)
+    }
+    
+    if (!is.null(input$gender) && length(input$gender) > 0) {
+      data <- subset(data, gender %in% input$gender)
+    }
+    
+    if (!is.null(input$race) && length(input$race) > 0) {
+      data <- subset(data, race %in% input$race)
+    }
+    
+    if (!is.null(input$ethnicity) && length(input$ethnicity) > 0) {
+      data <- subset(data, ethnicity %in% input$ethnicity)
     }
     
     
-    # TEMPLATE filter
-    if (!is.null(input$gender) && length(input$gender) < length(unique(CT_washout$Gender))) {
-      data <- subset(data, Gender %in% input$gender)
+    
+    data})
+    
+ #JR: this reactive summarises the data into counts of the selected categories, and is called into the graph 
+  CT_data <- reactive({
+    CT_summary <- filter_data() %>% 
+      group_by(.data[[input$status]], .data[[input$factor]]) %>% summarise(count = n(), .groups = "drop")
+  })
+#JR: this object is linked to the contingency table (contingency1), and is linked to the action button using eventReactive.
+#LAS: I updated this so that it looks more like a table in a word doc instead
+  #of like an old computer
+  
+  CT_table <- reactive({
+    req(input$status, input$factor)
+    
+    # Base counts table
+    tab <- filter_data() %>%
+      tabyl(.data[[input$status]], .data[[input$factor]])
+    
+    
+    # Save counts only for tests
+    counts_matrix <- as.matrix(tab[, -1])
+    
+    # Add percentages if switches are on
+    if (input$prop.r) tab <- tab %>% adorn_percentages("row") %>% adorn_pct_formatting()
+    if (input$prop.c) tab <- tab %>% adorn_percentages("col") %>% adorn_pct_formatting()
+    if (input$prop.t) tab <- tab %>% adorn_percentages("all") %>% adorn_pct_formatting()
+    
+    # Add totals for display
+    tab <- tab %>% adorn_totals(where = "row") %>% adorn_totals(where = "col")
+    
+    # Chi-square test
+    if (input$chisq) {
+      chi <- tryCatch(chisq.test(counts_matrix), error = function(e) NULL)
+      if(!is.null(chi)) {
+        tab$ChiSq_P <- round(chi$p.value, 4)
+        if (input$resid) tab$Residuals <- apply(chi$residuals, 1, function(x) paste(round(x, 2), collapse = ", "))
+        if (input$sresid) tab$Std_Residuals <- apply(chi$stdres, 1, function(x) paste(round(x, 2), collapse = ", "))
+        if (input$asresid) tab$Adj_Std_Residuals <- apply(chi$stdres / sqrt(1 - chi$expected/sum(chi$expected)), 1,
+                                                          function(x) paste(round(x, 2), collapse = ", "))
+      }
     }
     
-
+    # Fisher exact test
+    if (input$fisher) {
+      fisher_test <- tryCatch(fisher.test(counts_matrix), error = function(e) NULL)
+      if(!is.null(fisher_test)) tab$Fisher_P <- round(fisher_test$p.value, 4)
+    }
     
-    data
+    # Chi-sq proportions (row * col * total) if selected
+    if (input$prop.chisq) {
+      prop_chisq <- counts_matrix / sum(counts_matrix)
+      tab$ChiSq_Prop <- apply(prop_chisq, 1, function(x) paste(round(x, 3), collapse = ", "))
+    }
+    
+    return(tab)
   })
+  
+  # Render the table dynamically
+  output$contingency1 <- renderUI({
+    req(CT_table())
+    
+    HTML(
+      CT_table() %>%
+        kable(format = "html", table.attr = "style='width:100%;'", 
+              caption = paste("Contingency Table of", input$status, "and", input$factor)) %>%
+        kable_styling(full_width = TRUE, bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+    )
+  })
+  
+  
+  CT_title_text <- reactive({
+    paste("Cross-Tabulation of ", input$status, " and ", input$factor, sep = "")
+  })
+  
+  output$CT_title <- renderText({CT_title_text()})
+  
+  
+#JR: simple faceted plot that displays the various categories. Some aspects such as the legend or labels on the x-axis need to be cleaned up
+  #LAS: edited so that plots will display the filtered data
+  output$washout_plot <- renderPlot({
+   # ggplot(CT_data(), aes(x = .data[[input$status]], 
+                      #    y = count, 
+                       #   fill = .data[[input$factor]])) +
+     # geom_col(width = .5) +
+     # scale_y_continuous(n.breaks = 10) +
+     # facet_wrap(~.data[[input$factor]], scales = "free_y")
+ # })
+  
+#LAS: I commented out your plot above and added this updated one that I think
+    #is cooler but let me know because I want to make sure it serves your work
+    #needs
+  df <- filter_data() 
+  
+#LAS: Here I am defining the different stages of enrollment
+  stages <- c("Online Screener", "Phone Screen", "Zoom Screen", "Enrolled")
+  vars   <- c("screen_result", "phone_result", "zoom_result", "enrolled_result")
+  
+#LAS: Here I am making summary statistics for each enrollment stage
+  washout_df <- purrr::map2_df(stages, vars, function(stage, var) {
+    
+    df_stage <- df %>% filter(!is.na(.data[[var]]))
+    n_total  <- nrow(df_stage)
+    
 
-#Now we will generate plots based on the applied filters  
-  
-# Plot 1
-  output$plot1 <- renderPlot({
-    filteredData() %>%
-      filter(!is.na(enrolled)) %>%
-      count(enrolled, name = "n") %>% 
-      ggplot(aes(x = "", y = n, fill = enrolled)) +
-      geom_bar(width = 1, stat = "identity") +
-      coord_polar("y", start = 0) +
-      labs(title = "Total Enrolled") +
-      theme_void() +
-      scale_fill_manual(values = c("Yes" = "#1f77b4", "No" = "#ff7f0e"))
+    if (n_total == 0) {
+      return(tibble(
+        stage  = stage,
+        result = c("Eligible", "washout"),
+        n      = c(0, 0),
+        total  = 0,
+        pct    = c(0, 0)
+      ))
+    }
+    
+    out <- df_stage %>%
+      count(result = .data[[var]]) %>%
+      complete(result = c("Eligible", "washout"), fill = list(n = 0)) %>%  
+      mutate(
+        stage = stage,
+        total = n_total,
+        pct   = n / n_total * 100
+      )
+    
+    return(out)
   })
   
   
-#Plot Template for others
-  output$plot2 <- renderPlot({
-    PLOT2_CODE(filteredData())
-  })
+#LAS: Here I am deifning our enrollment options
+  washout_df <- washout_df %>%
+    mutate(
+      result = ifelse(str_to_lower(result) == "eligible", "Continue", "Washout"),
+      result = factor(result, levels = c("Continue", "Washout")),
+      stage  = factor(stage, levels = stages)
+    )
   
-  output$plot3 <- renderPlot({
-    YOUR_PLOT3_CODE(filteredData())
-  })
+#LAS: Here I am labeling each bar as n and %
+  washout_df <- washout_df %>%
+    mutate(label = paste0(n, " (", sprintf("%.1f", pct), "%)"))
   
-  output$plot4 <- renderPlot({
-    YOUR_PLOT4_CODE(filteredData())
-  })
+#LAS: and finally here is the updated Plot
+  ggplot(washout_df, aes(x = stage, y = pct, fill = result)) +
+    geom_bar(stat = "identity", width = 0.7) +
+    geom_text(
+      aes(label = label),
+      position = position_stack(vjust = 0.5),
+      color = "white",
+      size = 4.5,
+      fontface = "bold"
+    ) +
+    scale_fill_manual(values = c("Continue" = "darkgreen", "Washout" = "red")) +
+    labs(
+      title = "Participant Washout Funnel",
+      x = "Stage of Screening",
+      y = "Percentage of Participants at Stage"
+    ) +
+    theme_minimal(base_size = 15) +
+    theme(
+      legend.position = "top",
+      plot.title = element_text(face = "bold", size = 18, hjust = 0.5)
+    )
+})
   
-  output$plot5 <- renderPlot({
-    YOUR_PLOT5_CODE(filteredData())
-  })
-  
-  output$plot6 <- renderPlot({
-    YOUR_PLOT6_CODE(filteredData())
-  })
-  
+#JR: output text that runs homogeneity or independence tests. Would like to add Text to the blank start screen, e.g. 'Need to select tests"
+  output$CT_title <-renderText({CT_title_text()})
 }
 
-    
-# ----- Run App -----
-shinyApp(ui = ui, server = server)
-    
-    
-    
-    
-    
-    
-###############################################################################
-#################JR original plot code#########################################
-###############################################################################
+shinyApp(ui, server)
 
-#Next is plots of washout stages for each age group: plot 0 is total enrolled, yes or no. Plot
-#1 shows the number who washed out and who moved forward at the online screening stage.
-#Plot 2 shows the number who washed out at the phone screening stage. Plot 3 show the number
-#who washed out at the Zoom screening stage. Plot 4 shows the number who washed out at 
-#the in-person visit stage.
 
-CT_plot0 <- CT_washout %>% filter(!is.na(enrolled)) %>% ggplot(aes(x = "", y = age_class, fill = age_class))
 
-CT_plot0 + geom_bar(width = 1, stat = "identity") + coord_polar("y", start = 0) +
-  labs(title ="Total Enrolled") + theme_void() + facet_wrap(~enrolled)
-
-CT_plot1 <- CT_washout %>% filter(!is.na(screen_result)) %>%  ggplot(aes(x ="", y = age_class, fill = age_class))
-
-CT_plot1 + geom_bar(width = 1, stat = "identity") + coord_polar("y", start = 0) +
-  labs(title ="Completed Online Screen") + theme_void() + facet_wrap(~screen_result)
-
-CT_plot2 <- CT_washout %>% filter(!is.na(phone_result)) %>% ggplot(aes(x = "", y = age_class, fill = age_class))
-
-CT_plot2 + geom_bar(width = 1, stat ="identity") + coord_polar("y", start = 0) +
-  labs(title = "Completed Phone Screen") + theme_void() + facet_wrap(~phone_result)
-
-CT_plot3 <- CT_washout %>% filter(!is.na(zoom_result)) %>%  ggplot(aes(x = "", y = age_class, fill = age_class ))
-
-CT_plot3 + geom_bar(width = 1, stat = "identity") + coord_polar("y", start = 0) +
-  labs(title = "Completed Zoom") + theme_void() + facet_wrap(~zoom_result)
-
-CT_plot4 <- CT_washout %>% filter(!is.na(enrolled_result)) %>% ggplot(aes(x="", y = age_class, fill = age_class))
-
-CT_plot4 + geom_bar(width = 1, stat = "identity") + coord_polar("y", start = 0) +
-  labs(title = "Completed Enrollment") + theme_void() + facet_wrap(~enrolled_result)
-
-#you can see that the format for all these graphs are the same. What I am struggling with 
-#now is turning these into a generalized plot function that will take as inputs the 
-#columns I want to call (e.g. a factor variable such as age_class or gender, and a
-#results column such as screen_result or enrolled)
