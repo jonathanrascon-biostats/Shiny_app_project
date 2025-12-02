@@ -200,24 +200,19 @@ server <- function(input, output, session) {
   
   ############LAS CT server######################################################
   
+  # JR: Raw data display: can sort or search. Consider adding custom filters
   output$raw_data <- renderDataTable(CT_washout, rownames = FALSE)
-  #this reactive data frame removes NA values, and feeds into (1) summary data (CT_data) in the next step, and (2) into the contingency table (CT_table).
-  # For CT table
-  filter_ct <- reactive({
-    req(input$status)
-    CT_washout %>% drop_na(all_of(input$status))
-  })
   
-  
-  #this object is linked to the contingency table (contingency1), and is linked to the action button using eventReactive.
+  # JR: CT_table: takes primary inputs of status and factor and runs any selected tests
   CT_table <- reactive ({
     req(input$status, input$factor)   # ensure inputs exist
-    df <- filter_ct()
+    df <- CT_washout %>% drop_na(all_of(input$status))
     CrossTable(x = df[[input$status]], y = df[[input$factor]], expected = input$expected, prop.r = input$prop.r, 
                prop.c = input$prop.c, prop.t = input$prop.t, prop.chisq = input$prop.chisq, chisq = input$chisq, fisher = input$fisher,
                format = "SAS", dnn = c("Status", "Factor"))})
-  
-  CT_title_text <- reactive ({
+ 
+#JR: Updates a title for the table based on primary selections 
+  output$CT_title <-renderText ({
     factor_labels <- list("age_class" = "Age Group", "sex" = "Sex", "race" = "Race",
                           "gender" = "Gender", "ethnicity" = "Ethnicity")
     status_labels <- list( "enrolled" = "Total Enrollment",
@@ -230,9 +225,8 @@ server <- function(input, output, session) {
     paste("Cross-Tabulation of ", f_label, " and ", s_label, sep = "")
   })
   
-  #output text that runs homogeneity or independence tests. Would like to add Text to the blank start screen, e.g. 'Need to select tests"
+  #output text that runs homogeneity or independence tests. 
   output$contingency1 <- renderPrint({CT_table()})
-  output$CT_title <-renderText({CT_title_text()})
   
   
   #######################LAS: plots#############################################
