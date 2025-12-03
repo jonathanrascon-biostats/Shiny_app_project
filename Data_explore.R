@@ -132,15 +132,14 @@ server <- function(input, output, session) {
         selectInput("age_class", "Age Group",
                     choices = c("Older-Adult","Middle-aged","Adult","Youth"),
                     #LAS:This makes it so that you can select multiple groups from each category
-                    multiple = TRUE,
-                    #LAS: Makes it so that at baseline all values are selected
-                    selected = c("Older-Adult","Middle-aged","Adult","Youth")
+                    multiple = TRUE
+                    
         ),
         
         selectInput("sex", "Sex",
                     choices = c("Male","Female"),
-                    multiple = TRUE,
-                    selected = c("Male","Female")
+                    multiple = TRUE
+                    
         ),
         
         selectInput("gender", "Gender",
@@ -149,28 +148,21 @@ server <- function(input, output, session) {
                                 "Genderqueer/gender non-conforming",
                                 "Transgender Woman/Trans Woman",
                                 "Transgender Man/Trans Man"),
-                    multiple = TRUE,
-                    selected = c("Cis-Woman","Cis-Man","Prefer not to answer",
-                                 "Multiple Identities","Non-binary",
-                                 "Genderqueer/gender non-conforming",
-                                 "Transgender Woman/Trans Woman",
-                                 "Transgender Man/Trans Man")
+                    multiple = TRUE
+                    
         ),
         
         selectInput("race", "Race",
                     choices = c("White","Asian","Black or African American",
                                 "Multiple Races","Unsure",
                                 "American Indian or Alaska Native"),
-                    multiple = TRUE,
-                    selected = c("White","Asian","Black or African American",
-                                 "Multiple Races","Unsure",
-                                 "American Indian or Alaska Native")
+                    multiple = TRUE
+                  
         ),
         
         selectInput("ethnicity", "Hispanic/Latinx:",
                     choices = c("No","Yes","Unsure"),
-                    multiple = TRUE,
-                    selected = c("No","Yes","Unsure")
+                    multiple = TRUE
         )
       )
       
@@ -191,8 +183,59 @@ server <- function(input, output, session) {
       
       tagList(
         h4("Thanks for visiting our app!"),
-        p("For questions feel free to reach out to Lee Ann & Jonathan")
+        p("For questions feel free to reach out to Lee Ann & Jonathan"),
+        
+        selectInput("status2", "Enrollment Stage", choices = c(
+          "Total Enrollment" = "enrolled",
+          "Online Screener" = "screen_result",
+          "Phone Screening" = "phone_result",
+          "Zoom Visit" = "zoom_result",
+          "In-Person Visit" = "enrolled_result"
+        ), multiple = FALSE, selected = "enrolled"),
+        
+        selectInput("source2", "Recruitment Source", 
+                    choices = c("Referral from another study",
+                                "email listserv", "Today@Brown", "Craigslist",
+                                "internet", "Instagram", "Facebook", "Friend",
+                                "Flyer/Poster", "Multiple", "reddit", "Other"),
+                    multiple = TRUE
+         ),
+        selectInput("age_class2", "Age Group",
+                    choices = c("Older-Adult","Middle-aged","Adult","Youth"),
+                    #LAS:This makes it so that you can select multiple groups from each category
+                    multiple = TRUE
+        ),
+        
+        selectInput("sex2", "Sex",
+                    choices = c("Male","Female"),
+                    multiple = TRUE
+        ),
+        
+        selectInput("gender2", "Gender",
+                    choices = c("Cis-Woman","Cis-Man","Prefer not to answer",
+                                "Multiple Identities","Non-binary",
+                                "Genderqueer/gender non-conforming",
+                                "Transgender Woman/Trans Woman",
+                                "Transgender Man/Trans Man"),
+                    multiple = TRUE
+                   
+        ),
+        
+        selectInput("race2", "Race",
+                    choices = c("White","Asian","Black or African American",
+                                "Multiple Races","Unsure",
+                                "American Indian or Alaska Native"),
+                    multiple = TRUE
+                   
+        ),
+        
+        selectInput("ethnicity2", "Hispanic/Latinx:",
+                    choices = c("No","Yes","Unsure"),
+                    multiple = TRUE,
+                    
+        )
       )
+      
       
     }
   }) 
@@ -200,8 +243,20 @@ server <- function(input, output, session) {
   
   ############LAS CT server######################################################
   
-  # JR: Raw data display: can sort or search. Consider adding custom filters
-  output$raw_data <- renderDataTable(CT_washout, rownames = FALSE)
+  # JR: Raw data display: can sort or search.
+  
+  filter_data <- reactive({
+    data <- CT_washout %>% drop_na(all_of(input$status2))
+    if (!is.null(input$source2) && length(input$source2) > 0) data <- subset(data, source %in% input$source2)
+    if (!is.null(input$age_class2) && length(input$age_class2) > 0) data <- subset(data, age_class %in% input$age_class2)
+    if (!is.null(input$sex2) && length(input$sex2) > 0) data <- subset(data, sex %in% input$sex2)
+    if (!is.null(input$gender2) && length(input$gender2) > 0) data <- subset(data, gender %in% input$gender2)
+    if (!is.null(input$race2) && length(input$race2) > 0) data <- subset(data, race %in% input$race2)
+    if (!is.null(input$ethnicity2) && length(input$ethnicity2) > 0) data <- subset(data, ethnicity %in% input$ethnicity2)
+    data
+  })
+  
+  output$raw_data <- renderDataTable(filter_data(), rownames = FALSE)
   
   # JR: CT_table: takes primary inputs of status and factor and runs any selected tests
   CT_table <- reactive ({
