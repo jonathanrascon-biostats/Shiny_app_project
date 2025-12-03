@@ -27,3 +27,6 @@ The last four columns are ordered as the order of the screening process:
 *phone_result (phone screening)
 *zoom_result (zoom visit)
 *enrolled (whether they completed in-person and joined the study)
+
+NOTE: *CT_recruit_data.csv is the original cleaned data set. A few additional steps were taken to create CT_washout, our final dataset.
+*scrap_records.R was a place to trial code before commiting it to the app. *CT_washout is our final dataset.
