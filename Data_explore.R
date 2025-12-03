@@ -46,8 +46,9 @@ ui <- page_sidebar(
     #LAS: Need this for the dynamic tabs
     id = "tabs",
     #JR:
-    nav_panel("Description", p("Project CannTalk is a longitudinal observational study tracking habitual cannabis users over the course of approximately 9 months. 
-                               With the majority of US states having adopted legislation to medically and/or recreationally legalize cannabis, public perception of 
+    nav_panel("Description", p("Project CannTalk is a longitudinal observational study tracking habitual cannabis users over the course of approximately 9 months."),
+                               
+                              p("With the majority of US states having adopted legislation to medically and/or recreationally legalize cannabis, public perception of 
                                the drug is now overwhelmingly favorable. Increased access and prevalence of use are accompanied by perceptions of low health risk 
                                and/or of therapeutic benefits associated with cannabis use. Aside from evidence for symptom relief in certain medical conditions, 
                                evidence regarding therapeutic effects of cannabis for many conditions remains elusive, leaving the decision regarding when and how 
@@ -56,13 +57,12 @@ ui <- page_sidebar(
                                how it shapes their thinking, and ultimately its association with CU patterns. This study will gather critical information about
                                message sources, cannabis-promoting content, and risk warnings being disseminated to cannabis users as well as the messages being received, 
                                their effects on CU motives, and subsequent CU. This app is meant to track recruitment efforts of the study.
-                               There are many burdens-to-entry in the study: Online screening, Phone screening, Zoom Visit, In-person Visit. Of the 450 people initially eligible, only about 30% made it to enrollment.
+                               There are many burdens-to-entry in the study: Online screening, Phone screening, Zoom Visit, In-person Visit. Of the nearly 450 people initially eligible, only about 30% made it to enrollment.
                                This app tracks the point at which a participant washes out, i.e. the point at which they no longer progressed in the study, and those who are fully enrolled."),
-              p("App Usage: Choose an enrollment stage (up to Total Enrollment), a Category (e.g. Age Group), and any tests to perform. Click 'Generate' to perform
-                               the test(s). The term 'washout' refers to: Lost to follow up, Ineligible, Not Interested(withdrew). The majority of these were Lost.")),
+),
     nav_panel("Plots", plotOutput("washout_plot")),
     nav_panel("Contingency Table", textOutput("CT_title"), verbatimTextOutput("contingency1")),
-    nav_panel("Raw Data", dataTableOutput("raw_data"))
+    nav_panel("Raw Data", dataTableOutput("raw_data")),
   )
 )
 
@@ -125,7 +125,7 @@ server <- function(input, output, session) {
       
       tagList(
         h4("Filters"),
-        
+        p("Choose any number of filters to display"),
         #LAS: this makes it so that you can filter through which ever groups
         #you want the plot to include.
         
