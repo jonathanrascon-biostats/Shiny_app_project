@@ -63,6 +63,19 @@ ui <- page_sidebar(
     nav_panel("Plots", plotOutput("washout_plot")),
     nav_panel("Contingency Table", textOutput("CT_title"), verbatimTextOutput("contingency1")),
     nav_panel("Raw Data", dataTableOutput("raw_data")),
+    nav_panel("Global Statement", h3("Definitions and Limitations"), 
+              h4("Definitions"),
+              p("The term 'washout' refers to anyone Lost to Follow up, Ineligible, Not Interested,
+                and Withdrew. The majority of these were Lost to Follow up. We grouped these to run 
+                more effective tests via the Contingency table"),
+              p("Age groups are as follows: Youth (18-24), Adult (25-44), Middle-aged (45-59), and Older-Adult (60-74)"),
+              h4("Limitations"),
+              p("This app should be considered exploratory rather than explanatory. Because of the 
+                number of tests that can be run, taking its results as proof positive of a statistically 
+                significant find would be misleading—tantamount to “fishing” for p-values. The likelihood of 
+                committing either type I or type II errors is high. Any results found from this app should 
+                invite more targeted exploration of the results and the data they stem from.")
+    )
   )
 )
 
@@ -182,9 +195,8 @@ server <- function(input, output, session) {
     } else if (input$tabs == "Raw Data") {
       
       tagList(
-        h4("Thanks for visiting our app!"),
-        p("For questions feel free to reach out to Lee Ann & Jonathan"),
-        
+        h4("Filters"),
+        p("Choose any desired filters"),
         selectInput("status2", "Enrollment Stage", choices = c(
           "Total Enrollment" = "enrolled",
           "Online Screener" = "screen_result",
@@ -237,6 +249,10 @@ server <- function(input, output, session) {
       )
       
       
+    } else if (input$tabs == "Global Statement"){
+      tagList(
+      h4("Thanks for visiting our app!"),
+      p("For questions feel free to reach out to Lee Ann & Jonathan"))
     }
   }) 
   
